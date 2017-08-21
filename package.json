@@ -1,8 +1,8 @@
 {
-  "name": "pokemon-stay",
+  "name": "bitfit",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/gumosun/pokemon-stay.git",
+  "repository": "https://github.com/gumosun/bitfit.git",
   "author": "Hao Sun <hao.sun@nyu.edu>",
   "license": "MIT",
   "dependencies": {
