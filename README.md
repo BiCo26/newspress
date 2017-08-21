@@ -1,4 +1,4 @@
-# Bit**fit
+# NewsPress
 
 Is a multiplayer dueling game that can be played from different computers.  The user can choose their own Bitmoji avatar to duel their friends or their enemies in their choice of 1 of 7 seven arenas which are the 7 natural wonders of the world.
 
