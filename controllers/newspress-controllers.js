@@ -1,13 +1,13 @@
-const Bitfit = require('../models/bitfit');
+const Newspress = require('../models/newspress');
 
-const bitfitController = {};
+const newspressController = {};
 
-bitfitController.index = (req, res) => {
-  Bitfit.findAll()
-    .then(bitfit => {
+newspressController.index = (req, res) => {
+  Newspress.findAll()
+    .then(newspress => {
       res.json({
         message: 'ok',
-        data: bitfit,
+        data: newspress,
       });
     })
     .catch(err => {
@@ -16,12 +16,12 @@ bitfitController.index = (req, res) => {
     });
 };
 
-bitfitController.show = (req, res) => {
-  Bitfit.findById(req.params.id)
-    .then(bitfit => {
+newspressController.show = (req, res) => {
+  Newspress.findById(req.params.id)
+    .then(newspress => {
       res.json({
         message: 'ok',
-        data: bitfit,
+        data: newspress,
       });
     })
     .catch(err => {
@@ -30,18 +30,18 @@ bitfitController.show = (req, res) => {
     });
 };
 
-bitfitController.create = (req, res) => {
-  Bitfit.create({
+newspressController.create = (req, res) => {
+  Newspress.create({
     flavor: req.body.flavor,
     description: req.body.description,
     rating: req.body.rating,
     url: req.body.url,
     brand: req.body.brand,
   })
-    .then(bitfit => {
+    .then(newspress => {
       res.json({
         message: 'ok',
-        data: bitfit,
+        data: newspress,
       });
     })
     .catch(err => {
@@ -50,8 +50,8 @@ bitfitController.create = (req, res) => {
     });
 };
 
-bitfitController.update = (req, res) => {
-  Bitfit.update(
+newspressController.update = (req, res) => {
+  Newspress.update(
     {
       flavor: req.body.flavor,
       description: req.body.description,
@@ -61,10 +61,10 @@ bitfitController.update = (req, res) => {
     },
     req.params.id,
   )
-    .then(bitfit => {
+    .then(newspress => {
       res.json({
         message: 'ok',
-        data: bitfit,
+        data: newspress,
       });
     })
     .catch(err => {
@@ -73,12 +73,12 @@ bitfitController.update = (req, res) => {
     });
 };
 
-bitfitController.destroy = (req, res) => {
-  Bitfit.destroy(req.params.id)
-    .then(bitfit => {
+newspressController.destroy = (req, res) => {
+  Newspress.destroy(req.params.id)
+    .then(newspress => {
       res.json({
         message: 'ok',
-        data: bitfit,
+        data: newspress,
       });
     })
     .catch(err => {
@@ -87,4 +87,4 @@ bitfitController.destroy = (req, res) => {
     });
 };
 
-module.exports = bitfitController;
+module.exports = newspressController;

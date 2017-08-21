@@ -1,25 +1,25 @@
 const db = require('../db/config');
 
-const Bitfit = {};
+const Newspress = {};
 
-Bitfit.findAll = () => {
-  return db.query(`SELECT * FROM bitfit`);
+Newspress.findAll = () => {
+  return db.query(`SELECT * FROM newspress`);
 };
 
-Bitfit.findById = id => {
+Newspress.findById = id => {
   return db.oneOrNone(
     `
-    SELECT * FROM bitfit
+    SELECT * FROM newspress
     WHERE id = $1
   `,
     [id]
   );
 };
 
-Bitfit.create = bitfit => {
+Newspress.create = newpress => {
   return db.one(
     `
-    INSERT INTO bitfit
+    INSERT INTO newspress
     (1, 2, 3, 4, 5)
     VALUES ($1, $2, $3, $4, $5)
     RETURNING *
@@ -28,10 +28,10 @@ Bitfit.create = bitfit => {
   );
 };
 
-Bitfit.update = (bitfit, id) => {
+Newspress.update = (newspress, id) => {
   return db.one(
     `
-    UPDATE bitfit SET
+    UPDATE newspress SET
       1 = $1,
       2 = $2,
       3 = $3,
@@ -45,15 +45,14 @@ Bitfit.update = (bitfit, id) => {
 };
 
 
-
-Bitfit.destroy = id => {
+Newspress.destroy = id => {
   return db.none(
     `
-    DELETE FROM bitfit
+    DELETE FROM newspress
     WHERE id = $1
   `,
     [id]
   );
 };
 
-module.exports = Bitfit;
+module.exports = Newspress;

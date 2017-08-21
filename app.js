@@ -51,8 +51,8 @@ app.get('/', (req, res) => {
 });
 
 //additional routes
-// const bitfitRoutes = require('./routes/bitfit-routes');
-// app.use('/bitfit', bitfitRoutes);
+// const newspressRoutes = require('./routes/newspress-routes');
+// app.use('/newspress', newspressRoutes);
 
 /*const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
