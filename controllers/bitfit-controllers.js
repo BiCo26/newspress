@@ -1,13 +1,13 @@
-const Pokemon = require('../models/pokemon');
+const Bitfit = require('../models/bitfit');
 
-const pokemonController = {};
+const bitfitController = {};
 
-pokemonController.index = (req, res) => {
-  Pokemon.findAll()
-    .then(pokemons => {
+bitfitController.index = (req, res) => {
+  Bitfit.findAll()
+    .then(bitfit => {
       res.json({
         message: 'ok',
-        data: pokemons,
+        data: bitfit,
       });
     })
     .catch(err => {
@@ -16,12 +16,12 @@ pokemonController.index = (req, res) => {
     });
 };
 
-pokemonController.show = (req, res) => {
-  Pokemon.findById(req.params.id)
-    .then(pokemon => {
+bitfitController.show = (req, res) => {
+  Bitfit.findById(req.params.id)
+    .then(bitfit => {
       res.json({
         message: 'ok',
-        data: pokemon,
+        data: bitfit,
       });
     })
     .catch(err => {
@@ -30,18 +30,18 @@ pokemonController.show = (req, res) => {
     });
 };
 
-pokemonController.create = (req, res) => {
-  Pokemon.create({
+bitfitController.create = (req, res) => {
+  Bitfit.create({
     flavor: req.body.flavor,
     description: req.body.description,
     rating: req.body.rating,
     url: req.body.url,
     brand: req.body.brand,
   })
-    .then(pokemon => {
+    .then(bitfit => {
       res.json({
         message: 'ok',
-        data: pokemon,
+        data: bitfit,
       });
     })
     .catch(err => {
@@ -50,8 +50,8 @@ pokemonController.create = (req, res) => {
     });
 };
 
-pokemonController.update = (req, res) => {
-  Pokemon.update(
+bitfitController.update = (req, res) => {
+  Bitfit.update(
     {
       flavor: req.body.flavor,
       description: req.body.description,
@@ -61,10 +61,10 @@ pokemonController.update = (req, res) => {
     },
     req.params.id,
   )
-    .then(pokemon => {
+    .then(bitfit => {
       res.json({
         message: 'ok',
-        data: pokemon,
+        data: bitfit,
       });
     })
     .catch(err => {
@@ -73,12 +73,12 @@ pokemonController.update = (req, res) => {
     });
 };
 
-pokemonController.destroy = (req, res) => {
-  Pokemon.destroy(req.params.id)
-    .then(pokemon => {
+bitfitController.destroy = (req, res) => {
+  Bitfit.destroy(req.params.id)
+    .then(bitfit => {
       res.json({
         message: 'ok',
-        data: pokemon,
+        data: bitfit,
       });
     })
     .catch(err => {
@@ -87,4 +87,4 @@ pokemonController.destroy = (req, res) => {
     });
 };
 
-module.exports = pokemonController;
+module.exports = bitfitController;

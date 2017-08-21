@@ -51,8 +51,8 @@ app.get('/', (req, res) => {
 });
 
 //additional routes
-// const pokemonRoutes = require('./routes/pokemon-routes');
-// app.use('/pokemon', pokemonRoutes);
+// const bitfitRoutes = require('./routes/bitfit-routes');
+// app.use('/bitfit', bitfitRoutes);
 
 /*const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);

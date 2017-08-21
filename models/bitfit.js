@@ -1,25 +1,25 @@
 const db = require('../db/config');
 
-const Pokemon = {};
+const Bitfit = {};
 
-Pokemon.findAll = () => {
-  return db.query(`SELECT * FROM pokemon`);
+Bitfit.findAll = () => {
+  return db.query(`SELECT * FROM bitfit`);
 };
 
-Pokemon.findById = id => {
+Bitfit.findById = id => {
   return db.oneOrNone(
     `
-    SELECT * FROM pokemon
+    SELECT * FROM bitfit
     WHERE id = $1
   `,
     [id]
   );
 };
 
-Pokemon.create = pokemon => {
+Bitfit.create = bitfit => {
   return db.one(
     `
-    INSERT INTO pokemon
+    INSERT INTO bitfit
     (1, 2, 3, 4, 5)
     VALUES ($1, $2, $3, $4, $5)
     RETURNING *
@@ -28,10 +28,10 @@ Pokemon.create = pokemon => {
   );
 };
 
-Pokemon.update = (pokemon, id) => {
+Bitfit.update = (bitfit, id) => {
   return db.one(
     `
-    UPDATE pokemon SET
+    UPDATE bitfit SET
       1 = $1,
       2 = $2,
       3 = $3,
@@ -46,14 +46,14 @@ Pokemon.update = (pokemon, id) => {
 
 
 
-Pokemon.destroy = id => {
+Bitfit.destroy = id => {
   return db.none(
     `
-    DELETE FROM pokemon
+    DELETE FROM bitfit
     WHERE id = $1
   `,
     [id]
   );
 };
 
-module.exports = Pokemon;
+module.exports = Bitfit;
