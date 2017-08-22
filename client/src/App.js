@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 import GetNews from './components/GetNews';
 import SourcesInput from './components/SourcesInput';
@@ -31,6 +32,7 @@ class App extends Component {
         auth: res.data.auth,
         user: res.data.user,
       });
+      console.log(this.state.user)
     }).catch(err => console.log(err));
   }
 
@@ -41,6 +43,7 @@ class App extends Component {
       password,
     }).then(res => {
       this.setState({
+        
         auth: res.data.auth,
         user: res.data.user,
       });

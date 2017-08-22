@@ -17,7 +17,7 @@ authRoutes.get('/register', authHelpers.loginRedirect, (req, res) => {
   });
 });
 //creates a new user 
-authRoutes.post('/register', usersController.create);
+authRoutes.post('/register',usersController.create);
 
 //submits User login form
 authRoutes.post('/login', passport.authenticate('local', {
