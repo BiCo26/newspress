@@ -1,4 +1,4 @@
-
+//passport authenticates user
 const passport = require('passport');
 const User = require('../../models/user');
 
@@ -16,3 +16,11 @@ module.exports = () => {
       });
   });
 };
+
+//logout
+authRouter.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
+module.exports = authRouter;
