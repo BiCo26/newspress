@@ -56,11 +56,11 @@ app.get('/', (req, res) => {
 // const newspressRoutes = require('./routes/newspress-routes');
 // app.use('/newspress', newspressRoutes);
 
-/*const authRoutes = require('./routes/auth-routes');
+
+const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
-app.use('/user', userRoutes);*/
-
+app.use('/user', userRoutes);
 
 app.get('*', (req, res) => {
     const err = new Error('not found!');
