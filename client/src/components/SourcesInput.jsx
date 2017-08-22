@@ -5,7 +5,7 @@ import GetNews from './GetNews';
 
 
 class SourcesInput extends Component {
-    
+
     constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ handleChange(event){
       source:event.target.value,
   });
 
-  console.log( 'adding  ' +this.state.source ); 
+  console.log( 'adding  ' +this.state.source); 
 }
 
 
