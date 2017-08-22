@@ -16,3 +16,13 @@ authRouter.get('/register', authHelpers.loginRedirect, (req, res) => {
     currentPage: 'register', 
   });
 });
+//creates a new user 
+authRouter.post('/register', usersController.create);
+
+//submits User login form
+authRouter.post('/login', passport.authenticate('local', {
+    successRedirect: '/user', 
+    failureRedirect: '/auth/login',
+    failureFlash: true,
+  })
+);
