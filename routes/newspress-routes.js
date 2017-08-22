@@ -1,15 +1,16 @@
 const express = require('express');
+
 const newspressRoutes = express.Router();
 
 const newspressController = require('../controllers/newspress-controller');
 
-newspressRouter.get('/', newspressController.index);
-// newspressRouter.post('/', newspressController.create);
+newspressRoutes.get('/', newspressController.index);
+// newspressRoute.post('/', newspressController.create);
 newspressRoutes.post('/', authHelpers.loginRequired, newspressController.create);//B
 
-// newspressRouter.get('/:id', newspressController.show);
-// newspressRouter.put('/:id', newspressController.update);
-// newspressRouter.delete('/:id', newspressController.destroy);
+// newspressroutes.get('/:id', newspressController.show);
+// newspressroutes.put('/:id', newspressController.update);
+// newspressroutes.delete('/:id', newspressController.destroy);
 
 
 // newspressRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
@@ -24,4 +25,6 @@ newspressRoutes.post('/', authHelpers.loginRequired, newspressController.create)
 // newspressRoutes.delete('/:id', authHelpers.loginRequired, newspressController.delete);
 
 
+
 module.exports = newspressRoutes;
+

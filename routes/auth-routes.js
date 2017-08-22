@@ -27,4 +27,11 @@ authRoutes.post('/login', passport.authenticate('local', {
   })
 );
 
+//logout
+authRoutes.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
+
 module.exports = authRoutes;
