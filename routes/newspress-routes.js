@@ -1,5 +1,5 @@
 const express = require('express');
-const Router = express.Router();
+const newspressRoutes = express.Router();
 
 const newspressController = require('../controllers/newspress-controller');
 
@@ -23,4 +23,5 @@ newspressRoutes.post('/', authHelpers.loginRequired, newspressController.create)
 // newspressRoutes.put('/:id', authHelpers.loginRequired, newspressController.update);
 // newspressRoutes.delete('/:id', authHelpers.loginRequired, newspressController.delete);
 
-module.exports = newspressRouter;
+
+module.exports = newspressRoutes;

@@ -24,3 +24,4 @@ authRouter.get('/logout', (req, res) => {
 });
 
 module.exports = authRouter;
+
