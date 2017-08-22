@@ -2,8 +2,20 @@ const db = require('../db/config');
 
 const Newspress = {};
 
-Newspress.findAll = () => {
-  return db.query(`SELECT * FROM newspress`);
+
+Newspress.userSources = id => {
+  return db.manyOrNone(`
+    SELECT 
+    sources.image_url,
+    sources.source_name,
+    source.source_code,
+    FROM 
+    users JOIN join_table
+    ON join_table.user_id = users.id
+    WHERE user_id = $1 
+    sources JOIN join_table
+    ON sources.id = join_table.source_id  
+  `, [id]);
 };
 
 Newspress.findById = id => {
@@ -54,5 +66,7 @@ Newspress.destroy = id => {
     [id]
   );
 };
+
+
 
 module.exports = Newspress;
