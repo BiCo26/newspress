@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SingleArticle from './SingleArticle';
 import axios from 'axios';
 
+
+
 class GetNews extends Component {
   constructor() {
     super();
