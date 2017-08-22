@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 
 import sources from "../data/defualtSources";
-
+import axios from 'axios';
 
 class SourceChoices extends Component {
 
@@ -19,12 +19,24 @@ class SourceChoices extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+
+
 	handleClick(source_object) {
+
+	  axios.post('/news', {
+        source: source_object
+      })
+      .then(res => {
+		console.log("Posted"+ source_object.source.name);
+        console.log(res);
+      })
+      .catch(err => console.log(err));
+
+
+
 		let updatedSources = this.state.sourceInputArray;
-		updatedSources.push({
-			code: source_object.source.code,
-			name: source_object.source.name
-		});
+		updatedSources.push(source_object
+			);
 		console.log(this.state.sourceInputArray[0].code);
 
 		this.setState({
