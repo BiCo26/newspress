@@ -1,13 +1,13 @@
 const express = require('express');
-const Router = express.Router();
+const newspressRoutes = express.Router();
 
 const newspressController = require('../controllers/newspress-controller');
 
-newspressRouter.get('/', newspressController.index);
-newspressRouter.post('/', newspressController.create);
+newspressRoutes.get('/', newspressController.index);
+newspressRoutes.post('/', newspressController.create);
 
-newspressRouter.get('/:id', newspressController.show);
-newspressRouter.put('/:id', newspressController.update);
-newspressRouter.delete('/:id', newspressController.destroy);
+newspressRoutes.get('/:id', newspressController.show);
+newspressRoutes.put('/:id', newspressController.update);
+newspressRoutes.delete('/:id', newspressController.destroy);
 
-module.exports = newspressRouter;
+module.exports = newspressRoutes;
