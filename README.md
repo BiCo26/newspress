@@ -1,14 +1,14 @@
-# NewsPress
-
-Is a multiplayer dueling game that can be played from different computers.  The user can choose their own Bitmoji avatar to duel their friends or their enemies in their choice of 1 of 7 seven arenas which are the 7 natural wonders of the world.
+# News Press
+Is a news feed app.  On the landing page the user can choose from top trending news videos and upon account registration can save their videos to their user profile.
 
 ###Technology Used
--Express framework for backend.
--ReactJS for front-end.
--PSQL to hold data from the, 
--API that will ...
--Firebase is used for the Facebook token login
--Sockets.io is used for the purpose of playing from different   computers.
+* Express framework for backend.
+* ReactJS for front-end.
+* PSQL to hold data from our own, 
+* API that will save a user's favorite news sources.
+* Third party API to render the news
+* Firebase is used for the Facebook token login
+
 
 #Wireframe
 
