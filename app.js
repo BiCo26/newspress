@@ -56,10 +56,6 @@ app.get('/', (req, res) => {
 const newspressRoutes = require('./routes/newspress-routes');
 app.use('/news', newspressRoutes);
 
-//additional routes
-// const newspressRoutes = require('./routes/newspress-routes');
-// app.use('/newspress', newspressRoutes);
-
 /*const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
