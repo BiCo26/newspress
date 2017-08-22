@@ -6,6 +6,20 @@ CREATE TABLE IF NOT EXISTS users (
   password_digest TEXT NOT NULL
 );
 
+CREATE TABLE if NOT EXISTS comments (
+  id SERIAL PRIMARY KEY,
+  post_id INT REFERENCES posts(id),
+  username INT REFERENCES user_id(id),
+  comments VARCHAR(255),
+);
+
+CREATE TABLE if NOT EXISTS posts (
+  id SERIAL PRIMARY KEY,
+  article_id INT REFERENCES articles(id),
+  username INT REFERENCES user_id(id),
+  topic VARCHAR(255)
+);
+
 CREATE TABLE IF NOT EXISTS articles (
   id SERIAL PRIMARY KEY,
   author VARCHAR(255) NOT NULL,
@@ -13,7 +27,7 @@ CREATE TABLE IF NOT EXISTS articles (
   publishedAt VARCHAR(255) NOT NULL,
   title VARCHAR(255) NOT NULL,
   url VARCHAR(255) NOT NULL,
-  image_url VARCHAR(255) NOT NULL
+  image_url VARCHAR(255) NOT NULL,
 );
 
 CREATE TABLE IF NOT EXISTS sources (
@@ -30,3 +44,4 @@ CREATE TABLE IF NOT EXISTS join_table (
   user_id INT REFERENCES users(id) NOT NULL,
   source_id INT REFERENCES sources(id) NOT NULL
 );
+
