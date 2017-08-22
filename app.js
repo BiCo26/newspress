@@ -7,25 +7,28 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+const bcryptjs = require('bcryptjs');
 
 const app = express();
-require('dotenv').config();
-app.use(logger('dev'));
 
-// middlewares
+require('dotenv').config();
+
+
+//middleware
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
 app.use(cookieParser());
 app.use(session({
   secret: process.env.SECRET_KEY,
   resave: false,
   saveUninitialized: true,
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
-// static files
+
 app.use(express.static('public'));
 
 // views
@@ -43,7 +46,7 @@ app.get('/', (req, res) => {
 /* setting up port & listen */
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
-  console.log(`listening on port ${PORT} 00`);
+  console.log(`Port : ${PORT}`);
 });
 
 app.get('/', (req, res) => {
