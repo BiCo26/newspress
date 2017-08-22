@@ -40,6 +40,17 @@ Newspress.create = newpress => {
   );
 };
 
+//We have access to all of the user's information on req.user, so 
+//we can use that in our Movie.create model method. In models/movie.js:
+//NOT FINISHED >
+// Newspress.create = (newspress, id) => {
+//   return db.one(
+//     `INSERT INTO movies (title, year, genre, user_id) 
+//     VALUES ($1, $2) RETURNING *`,
+//     [movie.title, movie.year, movie.genre, id]);
+// }
+
+
 Newspress.update = (newspress, id) => {
   return db.one(
     `

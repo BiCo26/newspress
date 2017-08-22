@@ -13,7 +13,15 @@ function loginRedirect(req, res, next) {
   return next();
 }
 
+//redirects users that are not logged in
+function loginRequired(req, res, next) {
+  if (!req.user) return res.redirect('/auth/login');
+  return next();
+}
+
 module.exports = {
   comparePass,
   loginRedirect,
+  loginRequired,
+
 }
