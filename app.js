@@ -53,7 +53,6 @@ app.get('/', (req, res) => {
   res.send('We are live!');
 });
 
-//additional routes
 // const newspressRoutes = require('./routes/newspress-routes');
 // app.use('/newspress', newspressRoutes);
 
