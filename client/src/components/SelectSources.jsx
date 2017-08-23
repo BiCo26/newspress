@@ -22,22 +22,7 @@ class SourceChoices extends Component {
 
 
 	handleClick(source_object) {
-<<<<<<< HEAD
- 
-      axios.post('/auth/register', {
-        source: source_object
-      })
-      .then(res => {
-		console.log("Posted"+ source_object.source.name);
-        console.log(res);
-      })
-      .catch(err => console.log(err));
-
-
-        console.log(source_object);
-=======
         console.log(source_object,'ioefjsoejfoi');
->>>>>>> 87647698ec058b94e340ce704474b286af4cb62a
 	  axios.post('/news', {
         source: source_object
       })
