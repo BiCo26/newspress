@@ -31,7 +31,7 @@ Newspress.findById = id => {
 Newspress.create = newspress => {
   return db.one(
     `
-    INSERT INTO newspress_dev
+    INSERT INTO sources
     (image_url, source_name, source_code)
     VALUES ($1, $2, $3)
     RETURNING *
