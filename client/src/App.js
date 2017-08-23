@@ -38,6 +38,7 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
+      if (!this.state.auth) {return <Default/>}
         return <Home/>;
         break;
       case 'login':
@@ -49,6 +50,8 @@ class App extends Component {
         break;
     }
   }
+
+  
 
   // AUTH
   handleLoginSubmit(e, username, password) {
@@ -93,12 +96,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-          <Home/> 
-        {/*<SelectSources/>*/}
+        <Header setPage={this.setPage} logOut={this.logOut}/>
+        {this.decideWhichPage()}
+         <Home/ >
+
+        {/* <SelectSources/> */}
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
