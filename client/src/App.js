@@ -38,7 +38,7 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
-        return <SourcesInput/>;
+        return <Home/>;
         break;
       case 'login':
         return <Login handleLoginSubmit={this.handleLoginSubmit} />;
@@ -95,7 +95,6 @@ class App extends Component {
       <div className="App">
        <Header setPage={this.setPage} />
       {this.decideWhichPage()}  
-         <Home/>
         {/*<SelectSources/>*/}
     
          
