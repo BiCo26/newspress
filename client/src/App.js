@@ -93,6 +93,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+          <Home/> 
+        {/*<SelectSources/>*/}
+=======
       <Header setPage={this.setPage} logOut={this.logOut}/>
        <Register/>
       {this.decideWhichPage()}
@@ -100,6 +108,7 @@ class App extends Component {
       <Home/ >
 
         {/* <SelectSources/> */}
+>>>>>>> 87647698ec058b94e340ce704474b286af4cb62a
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
