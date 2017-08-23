@@ -7,30 +7,33 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+const bcryptjs = require('bcryptjs');
 
 const app = express();
-require('dotenv').config();
-app.use(logger('dev'));
 
-// middlewares
+require('dotenv').config();
+
+
+//middleware
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
 app.use(cookieParser());
 app.use(session({
   secret: process.env.SECRET_KEY,
   resave: false,
   saveUninitialized: true,
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
-// static files
+
 app.use(express.static('public'));
 
 // views
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 /*
 app.get('/', (req, res) => {
@@ -43,22 +46,21 @@ app.get('/', (req, res) => {
 /* setting up port & listen */
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function() {
-  console.log(`listening on port ${PORT} 00`);
+  console.log(`Port : ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('We are live!');
-});
+// app.get('/', (req, res) => {
+//   res.send('We are live!');
+// });
 
-//additional routes
-// const newspressRoutes = require('./routes/newspress-routes');
-// app.use('/newspress', newspressRoutes);
+const newspressRoutes = require('./routes/newspress-routes');
+app.use('/news', newspressRoutes);
 
-/*const authRoutes = require('./routes/auth-routes');
+const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
-const userRoutes = require('./routes/user-routes');
-app.use('/user', userRoutes);*/
 
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
 
 app.get('*', (req, res) => {
     const err = new Error('not found!');

@@ -2,8 +2,20 @@ const db = require('../db/config');
 
 const Newspress = {};
 
-Newspress.findAll = () => {
-  return db.query(`SELECT * FROM newspress`);
+
+Newspress.userSources = id => {
+  return db.manyOrNone(`
+    SELECT 
+    sources.image_url,
+    sources.source_name,
+    source.source_code,
+    FROM 
+    users JOIN join_table
+    ON join_table.user_id = users.id
+    WHERE user_id = $1 
+    sources JOIN join_table
+    ON sources.id = join_table.source_id  
+  `, [id]);
 };
 
 Newspress.findById = id => {
@@ -16,17 +28,28 @@ Newspress.findById = id => {
   );
 };
 
-Newspress.create = newpress => {
+Newspress.create = newspress => {
   return db.one(
     `
-    INSERT INTO newspress
-    (1, 2, 3, 4, 5)
-    VALUES ($1, $2, $3, $4, $5)
+    INSERT INTO newspress_dev
+    (image_url, source_name, source_code)
+    VALUES ($1, $2, $3)
     RETURNING *
   `,
-    [ 1,2,3,4]//these are place holders
+    [ newspress.image_url,newspress.source_name,newspress.source_code]//these are place holders
   );
 };
+
+//We have access to all of the user's information on req.user, so 
+//we can use that in our Movie.create model method. In models/movie.js:
+//NOT FINISHED >
+// Newspress.create = (newspress, id) => {
+//   return db.one(
+//     `INSERT INTO movies (title, year, genre, user_id) 
+//     VALUES ($1, $2) RETURNING *`,
+//     [movie.title, movie.year, movie.genre, id]);
+// }
+
 
 Newspress.update = (newspress, id) => {
   return db.one(
@@ -54,5 +77,7 @@ Newspress.destroy = id => {
     [id]
   );
 };
+
+
 
 module.exports = Newspress;
