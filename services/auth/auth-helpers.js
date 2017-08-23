@@ -9,6 +9,7 @@ function comparePass(userPassword, databasePassword) {
 
 //connected to auth-routes to redirect user to user profile
 function loginRedirect(req, res, next) {
+  console.log ("here here");
   if (req.user) return res.redirect('/user');
   return next();
 }

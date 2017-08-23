@@ -38,7 +38,7 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
-      if (!this.state.auth) {return <Default/>}
+      if (!this.state.auth) {/*return <Default/>*/}
         return <Home/>;
         break;
       case 'login':
@@ -60,6 +60,8 @@ class App extends Component {
       username,
       password,
     }).then(res => {
+      console.log ("66"+ res.data.user.id); 
+      console.log ("66"+ res.data.user.username); 
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
