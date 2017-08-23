@@ -97,8 +97,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+<<<<<<< HEAD
           <Home/> 
         {/*<SelectSources/>*/}
+=======
+         <Home/>
+        {/* <SelectSources/> */}
+>>>>>>> 2b97d4ce9b4144c8357235db95119a8250b62122
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>

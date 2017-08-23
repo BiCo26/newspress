@@ -32,8 +32,11 @@ app.use(passport.session());
 app.use(express.static('public'));
 
 // views
+<<<<<<< HEAD
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'ejs');
+=======
+>>>>>>> 2b97d4ce9b4144c8357235db95119a8250b62122
 
 /*
 app.get('/', (req, res) => {

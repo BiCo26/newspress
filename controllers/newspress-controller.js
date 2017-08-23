@@ -31,11 +31,10 @@ newspressController.show = (req, res) => {
 };
 
 newspressController.create = (req, res) => {
-  console.log(req.body.source);
   Newspress.create({
-    data: req.body.source,
   })
     .then(newspress => {
+      console.log(newspress);
       res.json({
         message: 'ok',
         data: newspress,
