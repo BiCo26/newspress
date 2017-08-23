@@ -8,7 +8,9 @@ const usersController = require('../controllers/users-controller');
 
 
 //creates a new user 
-authRoutes.post('/register',usersController.create);
+authRoutes.post('/register',function(){
+  console.log("testing123")
+},usersController.create);
 
 //submits User login form
 authRoutes.post('/login', passport.authenticate('local', {
