@@ -31,12 +31,9 @@ newspressController.show = (req, res) => {
 };
 
 newspressController.create = (req, res) => {
+  console.log(req.body.source);
   Newspress.create({
-    flavor: req.body.flavor,
-    description: req.body.description,
-    rating: req.body.rating,
-    url: req.body.url,
-    brand: req.body.brand,
+    data: req.body.source,
   })
     .then(newspress => {
       res.json({
