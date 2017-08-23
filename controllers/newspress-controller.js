@@ -31,7 +31,11 @@ newspressController.show = (req, res) => {
 };
 
 newspressController.create = (req, res) => {
+  console.log(req.body.source.source.name);
   Newspress.create({
+    source_name:req.body.source.source.name,
+    source_code:req.body.source.source.code,
+    image_url:req.body.source.source.img
   })
     .then(newspress => {
       console.log(newspress);
