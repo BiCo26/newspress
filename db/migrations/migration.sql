@@ -15,6 +15,9 @@ CREATE TABLE IF NOT EXISTS sources (
   id SERIAL PRIMARY KEY,
   image_url VARCHAR(255) NOT NULL,
   source_name VARCHAR(255) NOT NULL,
+<<<<<<< HEAD
+  source_code VARCHAR(255) NOT NULL
+=======
   source_code VARCHAR(255) NOT NULL,
 );
 >>>>>>> 87647698ec058b94e340ce704474b286af4cb62a
@@ -28,6 +31,7 @@ CREATE TABLE IF NOT EXISTS articles (
   url VARCHAR(255) NOT NULL,
   image_url VARCHAR(255) NOT NULL,
   source_id INT REFERENCES sources(id) 
+>>>>>>> 5e384450a3b56fc78afcac27407648cdbc8330fb
 );
 
 
@@ -41,7 +45,6 @@ CREATE TABLE IF NOT EXISTS sources (
 
 CREATE TABLE if NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
-  article_id INT REFERENCES articles(id),
   username VARCHAR(255) REFERENCES users(username),
   topic VARCHAR(255)
 );
@@ -58,3 +61,4 @@ CREATE TABLE IF NOT EXISTS join_table (
   user_id INT REFERENCES users(id) NOT NULL,
   source_id INT REFERENCES sources(id) NOT NULL
 );
+
