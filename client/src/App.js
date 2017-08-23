@@ -100,6 +100,7 @@ class App extends Component {
       <div className="App">
         <Header setPage={this.setPage} logOut={this.logOut}/>
         {this.decideWhichPage()}
+
          <Home/ >
 
         {/* <SelectSources/> */}
