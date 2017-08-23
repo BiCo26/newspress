@@ -13,14 +13,12 @@ class SourceChoices extends Component {
 			sourceInputArray: [],
 			source: null,
 			dataLoaded: false,
-
 		}
 		this.handleClick = this.handleClick.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-
-
+ 
 	handleClick(source_object) {
       console.log(source_object,'ioefjsoejfoi');
 	  axios.post('/news', {
@@ -32,8 +30,6 @@ class SourceChoices extends Component {
       })
       .catch(err => console.log(err));
 
-
-
 		let updatedSources = this.state.sourceInputArray;
 		updatedSources.push(source_object
 			);
@@ -42,7 +38,6 @@ class SourceChoices extends Component {
 		this.setState({
 			sourceInputArray: updatedSources,
 		})
-
 
 	}
 
