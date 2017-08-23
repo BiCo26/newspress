@@ -15,7 +15,8 @@ function loginRedirect(req, res, next) {
 
 //redirects users that are not logged in
 function loginRequired(req, res, next) {
-  if (!req.user) return res.redirect('/auth/login');
+  if (!req.user) 
+    // return res.redirect('/auth/login');
   return next();
 }
 
