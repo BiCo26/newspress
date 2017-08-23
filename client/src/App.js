@@ -10,7 +10,7 @@ import Home from './components/Home';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/header'
+import Header from './components/Header'
 
 class App extends Component {
    constructor() {
@@ -93,8 +93,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header setPage={this.setPage} logOut={this.logOut}/>
-      {this.decideWhichPage()}
+        <Header setPage={this.setPage} logOut={this.logOut}/>
          <Home/ >
 
         {/* <SelectSources/> */}
