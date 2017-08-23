@@ -10,7 +10,7 @@ import Home from './components/Home';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/header'
+import Header from './components/Header'
 
 class App extends Component {
    constructor() {
@@ -22,7 +22,7 @@ class App extends Component {
     }
     this.setPage = this.setPage.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
-    this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
+    // this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
    }
 
@@ -44,7 +44,7 @@ class App extends Component {
         return <Login handleLoginSubmit={this.handleLoginSubmit} />;
         break;
       case 'register':
-        return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
+        return <Register/>;
       default:
         break;
     }
@@ -66,19 +66,19 @@ class App extends Component {
     }).catch(err => console.log(err));
   }
 
-  handleRegisterSubmit(e, username, password) {
-    e.preventDefault();
-    axios.post('/auth/register', {
-      username,
-      password,
-    }).then(res => {
-      this.setState({  
-        auth: res.data.auth,
-        user: res.data.user,
-        currentPage: 'home',
-      });
-    }).catch(err => console.log(err));
-  }
+  // handleRegisterSubmit(e, username, password) {
+  //   e.preventDefault();
+  //   axios.post('/auth/register', {
+  //     username,
+  //     password,
+  //   }).then(res => {
+  //     this.setState({  
+  //       auth: res.data.auth,
+  //       user: res.data.user,
+  //       currentPage: 'home',
+  //     });
+  //   }).catch(err => console.log(err));
+  // }
 
   logOut() {
   axios.get('/auth/logout')
@@ -94,8 +94,10 @@ class App extends Component {
     return (
       <div className="App">
       <Header setPage={this.setPage} logOut={this.logOut}/>
+       <Register/>
       {this.decideWhichPage()}
-         <Home/ >
+     
+      <Home/ >
 
         {/* <SelectSources/> */}
         <p className="App-intro">
