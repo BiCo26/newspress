@@ -8,6 +8,7 @@ import SourcesInput from './components/SourcesInput';
 
 import Login from './components/Login';
 import Register from './components/Register';
+import Header from './components/Header'
 
 class App extends Component {
    constructor() {
@@ -90,17 +91,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Login handleLoginSubmit={this.handleLoginSubmit} />
-        <Register handleRegisterSubmit={this.handleRegisterSubmit} />
-         <SourcesInput/>
-       {/*<GetNews />*/}
+       <Header setPage={this.setPage} />
+      {this.decideWhichPage()}  
       </div>
     );
   }
