@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS sources (
   image_url VARCHAR(255) NOT NULL,
   source_name VARCHAR(255) NOT NULL,
   source_code VARCHAR(255) NOT NULL,
-  article_id INT REFERENCES articles(id) 
 );
 
 CREATE TABLE IF NOT EXISTS articles (
@@ -45,4 +44,3 @@ CREATE TABLE IF NOT EXISTS join_table (
   user_id INT REFERENCES users(id) NOT NULL,
   source_id INT REFERENCES sources(id) NOT NULL
 );
-
