@@ -6,7 +6,6 @@ const authHelpers = require('../services/auth/auth-helpers');
 const usersController = require('../controllers/users-controller');
 
 
-
 //creates a new user 
 authRoutes.post('/register',usersController.create);
 
@@ -18,11 +17,13 @@ authRoutes.post('/login', passport.authenticate('local', {
   }))
 
   authRoutes.get('/success', (req, res) => {
+    console.log ("8888 "+ req.user.username)
   res.json({
     auth: true,
     message: 'ok',
-    user: req.user,
-  });
+    user: { id:req.user.id,
+            username:req.user.username}
+           });
 });
 
 authRoutes.get('/failure', (req, res) => {

@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 
+
 CREATE TABLE IF NOT EXISTS articles (
   id SERIAL PRIMARY KEY,
   author VARCHAR(255) NOT NULL,
@@ -29,7 +30,6 @@ CREATE TABLE IF NOT EXISTS sources (
 
 CREATE TABLE if NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
-  article_id INT REFERENCES articles(id),
   username VARCHAR(255) REFERENCES users(username),
   topic VARCHAR(255)
 );
@@ -46,3 +46,4 @@ CREATE TABLE IF NOT EXISTS join_table (
   user_id INT REFERENCES users(id) NOT NULL,
   source_id INT REFERENCES sources(id) NOT NULL
 );
+
