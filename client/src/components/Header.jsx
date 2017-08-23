@@ -3,14 +3,17 @@ import React from 'react';
 const Header = (props) => {
   return (
     <header>
-      <div className="logo">NEWSPress</div>
+      <div className="logo">NewsPress</div>
       <nav>
         <ul>
           <li onClick={() => props.setPage('home')}>Home</li>
+          <li onClick={() => props.setPage('user')}>My News</li>
           <li onClick={() => props.setPage('login')}>Log In</li>
-          <li onClick={() => props.setPage('register')}>Register</li>
-          <li onClick={() => props.setPage('user')}>User Dashboard</li>
-          <li>Logout</li>
+            <ul className = 'submenu'>
+              <li onClick={() => props.setPage('register')}>Register</li>
+              <li onClick={props.logOut}>Log Out</li>
+            </ul>
+
         </ul>
       </nav>
     </header>
