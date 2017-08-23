@@ -26,7 +26,7 @@ class SourceChoices extends Component {
       })
       .then(res => {
 		console.log("Posted"+ source_object.source.name);
-        console.log(res);
+        console.log("cat" + res);
       })
       .catch(err => console.log(err));
 

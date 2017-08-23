@@ -8,9 +8,7 @@ const usersController = require('../controllers/users-controller');
 
 
 //creates a new user 
-authRoutes.post('/register',function(){
-  console.log("testing123")
-},usersController.create);
+authRoutes.post('/register',usersController.create);
 
 //submits User login form
 authRoutes.post('/login', passport.authenticate('local', {
@@ -20,11 +18,13 @@ authRoutes.post('/login', passport.authenticate('local', {
   }))
 
   authRoutes.get('/success', (req, res) => {
+    console.log ("8888 "+ req.user.username)
   res.json({
     auth: true,
     message: 'ok',
-    user: req.user,
-  });
+    user: { id:req.user.id,
+            username:req.user.username}
+           });
 });
 
 authRoutes.get('/failure', (req, res) => {

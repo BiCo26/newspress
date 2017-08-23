@@ -57,6 +57,8 @@ class App extends Component {
       username,
       password,
     }).then(res => {
+      console.log ("66"+ res.data.user.id); 
+      console.log ("66"+ res.data.user.username); 
       this.setState({
         auth: res.data.auth,
         user: res.data.user,

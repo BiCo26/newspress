@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS sources (
   id SERIAL PRIMARY KEY,
   image_url VARCHAR(255) NOT NULL,
   source_name VARCHAR(255) NOT NULL,
-  source_code VARCHAR(255) NOT NULL,
+  source_code VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS articles (
