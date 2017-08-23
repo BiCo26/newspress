@@ -11,9 +11,6 @@ CREATE TABLE IF NOT EXISTS sources (
   id SERIAL PRIMARY KEY,
   image_url VARCHAR(255) NOT NULL,
   source_name VARCHAR(255) NOT NULL,
-<<<<<<< HEAD
-  source_code VARCHAR(255) NOT NULL
-=======
   source_code VARCHAR(255) NOT NULL,
 );
 
@@ -26,7 +23,6 @@ CREATE TABLE IF NOT EXISTS articles (
   url VARCHAR(255) NOT NULL,
   image_url VARCHAR(255) NOT NULL,
   source_id INT REFERENCES sources(id) 
->>>>>>> 5e384450a3b56fc78afcac27407648cdbc8330fb
 );
 
 
