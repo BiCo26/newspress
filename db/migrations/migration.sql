@@ -7,13 +7,8 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 
-CREATE TABLE IF NOT EXISTS sources (
-  id SERIAL PRIMARY KEY,
-  image_url VARCHAR(255) NOT NULL,
-  source_name VARCHAR(255) NOT NULL,
-  source_code VARCHAR(255) NOT NULL,
-  article_id INT REFERENCES articles(id) 
-);
+
+
 
 CREATE TABLE IF NOT EXISTS articles (
   id SERIAL PRIMARY KEY,
@@ -24,6 +19,15 @@ CREATE TABLE IF NOT EXISTS articles (
   url VARCHAR(255) NOT NULL,
   image_url VARCHAR(255) NOT NULL,
   source_id INT REFERENCES sources(id) 
+);
+
+
+CREATE TABLE IF NOT EXISTS sources (
+  id SERIAL PRIMARY KEY,
+  image_url VARCHAR(255) NOT NULL,
+  source_name VARCHAR(255) NOT NULL,
+  source_code VARCHAR(255) NOT NULL,
+  article_id INT REFERENCES articles(id) 
 );
 
 CREATE TABLE if NOT EXISTS posts (
