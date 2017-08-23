@@ -5,8 +5,6 @@ const User = require('../models/user.js');
 const usersController = {};
 
 usersController.create = (req, res) => {
-  console.log ("we are in the create func"); 
-  console.log (req.body.username);
   const salt = bcrypt.genSaltSync();
   const hash = bcrypt.hashSync(req.body.password, salt);
   User.create({
@@ -15,7 +13,11 @@ usersController.create = (req, res) => {
   }).then(user => {
     req.login(user, (err) => {
       if (err) return next(err);
-      res.redirect('/user');
+      res.json({
+        message: 'ok',
+        user: user,
+        auth: true,
+      })
     });
   }).catch(err => {
     console.log(err);

@@ -15,11 +15,37 @@ class App extends Component {
     this.state = {
       auth: false,
       user: null,
+      currentPage: 'home',
     }
+    this.setPage = this.setPage.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
    }
+
+  // PAGINATION
+
+  setPage(page) {
+    console.log('click');
+    this.setState({
+      currentPage: page,
+    })
+  }
+
+  decideWhichPage() {
+    switch(this.state.currentPage) {
+      case 'home':
+        return <SourcesInput/>;
+        break;
+      case 'login':
+        return <Login handleLoginSubmit={this.handleLoginSubmit} />;
+        break;
+      case 'register':
+        return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
+      default:
+        break;
+    }
+  }
 
   // AUTH
   handleLoginSubmit(e, username, password) {
@@ -31,6 +57,7 @@ class App extends Component {
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
+        currentPage: 'home',
       });
       console.log(this.state.user)
     }).catch(err => console.log(err));
@@ -42,10 +69,10 @@ class App extends Component {
       username,
       password,
     }).then(res => {
-      this.setState({
-        
+      this.setState({  
         auth: res.data.auth,
         user: res.data.user,
+        currentPage: 'home',
       });
     }).catch(err => console.log(err));
   }
