@@ -53,10 +53,6 @@ app.listen(PORT, function() {
 //   res.send('We are live!');
 // });
 
-app.get('/hello', (req, res) => {
-  res.send('hello world');
-})
-
 const newspressRoutes = require('./routes/newspress-routes');
 app.use('/news', newspressRoutes);
 
