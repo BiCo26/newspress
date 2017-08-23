@@ -6,15 +6,9 @@ const authHelpers = require('../services/auth/auth-helpers');
 const usersController = require('../controllers/users-controller');
 
 authRoutes.get('/login', authHelpers.loginRedirect, (req, res) => {
-  res.render('auth/login', {
-    currentPage: 'login', 
-  });
 });
 
 authRoutes.get('/register', authHelpers.loginRedirect, (req, res) => {
-  res.render('auth/register', {
-    currentPage: 'register', 
-  });
 });
 //creates a new user 
 authRoutes.post('/register', usersController.create);

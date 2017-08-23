@@ -28,15 +28,15 @@ Newspress.findById = id => {
   );
 };
 
-Newspress.create = newpress => {
+Newspress.create = newspress => {
   return db.one(
     `
-    INSERT INTO newspress
-    (1, 2, 3, 4, 5)
-    VALUES ($1, $2, $3, $4, $5)
+    INSERT INTO newspress_dev
+    (image_url, source_name, source_code)
+    VALUES ($1, $2, $3)
     RETURNING *
   `,
-    [ 1,2,3,4]//these are place holders
+    [ newspress.image_url,newspress.source_name,newspress.source_code]//these are place holders
   );
 };
 
