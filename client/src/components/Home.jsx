@@ -46,9 +46,9 @@ class Home extends Component {
             console.log (this.state.soureData)
           return this.state.sourceData.map(source => {
         return (
-         <div>   
-          <h1>{source.code}+++++++++++++++++++++++++++++++++++++++++++++++</h1>
-          <GetNews source={source.code}/>
+         <div>  
+          <h1>{source.source.code}+++++++++++++++++++++++++++++++++++++++++++++++</h1>
+          <GetNews source={source.source.code}/>
           </div>
         );
       });
