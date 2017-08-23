@@ -69,3 +69,10 @@ header {
 }
 
 
+.source_icon{
+  height: 80px;
+}
+
+.source_icon_container{
+  border-style: dotted dashed solid double;
+}

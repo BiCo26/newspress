@@ -22,7 +22,8 @@ class SourceChoices extends Component {
 
 
 	handleClick(source_object) {
-
+        console.log ("see below");
+        console.log(source_object);
 	  axios.post('/news', {
         source: source_object
       })
