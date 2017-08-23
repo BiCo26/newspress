@@ -38,6 +38,7 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
+      if (!this.state.auth) {/*return <Default/>*/}
         return <Home/>;
         break;
       case 'login':
@@ -49,6 +50,8 @@ class App extends Component {
         break;
     }
   }
+
+  
 
   // AUTH
   handleLoginSubmit(e, username, password) {
@@ -95,9 +98,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header setPage={this.setPage} logOut={this.logOut}/>
-      {this.decideWhichPage()}
-         <Home/>
+        <Header setPage={this.setPage} logOut={this.logOut}/>
+        {this.decideWhichPage()}
+         <Home/ >
 
         {/* <SelectSources/> */}
         <p className="App-intro">
