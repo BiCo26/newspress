@@ -32,12 +32,6 @@ app.use(passport.session());
 app.use(express.static('public'));
 
 // views
-<<<<<<< HEAD
-=======
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
->>>>>>> b9ff40fec509394f58e03600d2c8b2cd59e917d4
-
 /*
 app.get('/', (req, res) => {
   res.render('index', {
@@ -52,9 +46,6 @@ app.listen(PORT, function() {
   console.log(`Port : ${PORT}`);
 });
 
-// app.get('/', (req, res) => {
-//   res.send('We are live!');
-// });
 
 const newspressRoutes = require('./routes/newspress-routes');
 app.use('/news', newspressRoutes);
