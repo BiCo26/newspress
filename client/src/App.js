@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import GetNews from './components/GetNews';
 import SourcesInput from './components/SourcesInput';
+import SelectSources from './components/SelectSources';
+import Home from './components/Home';
 
 import Login from './components/Login';
 import Register from './components/Register';
@@ -93,6 +95,12 @@ class App extends Component {
       <div className="App">
        <Header setPage={this.setPage} />
       {this.decideWhichPage()}  
+         <Home/>
+        {/*<SelectSources/>*/}
+    
+         
+         {/*<SourcesInput/>*/}
+       {/*<GetNews />*/}
       </div>
     );
   }
