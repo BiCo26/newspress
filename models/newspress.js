@@ -19,7 +19,7 @@ Newspress.userSources = id => {
 };
 
 Newspress.findUserSources = id => {
-  return db.oneOrNone(
+  return db.many(
     `
     SELECT * FROM sources
     WHERE user_id = $1
