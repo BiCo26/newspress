@@ -23,7 +23,7 @@ constructor(props){
     console.log ("ID "+this.props.userID); 
     console.log(article_object,'ioefjsoejfoi',this.props.userID);
   
-	  axios.post(/*route goes here*/null, {
+	  axios.post('news/saveArticle', {
         source: article_object,
         user_id: this.props.userID
 

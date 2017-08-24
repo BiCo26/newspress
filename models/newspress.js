@@ -40,6 +40,18 @@ Newspress.create = newspress => {
   );
 };
 
+Newspress.insertArticle = newspress => {
+  return db.one(
+    `
+    INSERT INTO articles
+    (author,description,publishedAt,title,url,image_url, user_id)
+    VALUES ($1, $2, $3, $4, $5, $6, $7)
+    RETURNING *
+  `,
+    [ newspress.author,newspress.description,newspress.publishedAt,newspress.title,newspress.url,newspress.image_url, newspress.user_id]//these are place holders
+  );
+};
+
 //We have access to all of the user's information on req.user, so 
 //we can use that in our Movie.create model method. In models/movie.js:
 //NOT FINISHED >

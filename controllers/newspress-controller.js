@@ -54,16 +54,17 @@ newspressController.create = (req, res) => {
     });
 };
 
-newspressController.update = (req, res) => {
-  Newspress.update(
-    {
-      flavor: req.body.flavor,
-      description: req.body.description,
-      rating: req.body.rating,
-      url: req.body.url,
-      brand: req.body.brand,
+newspressController.saveArticle = (req, res) => {
+  console.log(req.body, 'disofjdosf',req.body.user_id)
+  Newspress.insertArticle(
+    { author: req.body.source.author,
+      description: req.body.source.description,
+      publishedAt: req.body.source.publishedAt,
+      title: req.body.source.title,
+      url: req.body.source.url,
+      image_url: req.body.source.urlToImage,
+      user_id: req.body.user_id.id,
     },
-    req.params.id,
   )
     .then(newspress => {
       res.json({
