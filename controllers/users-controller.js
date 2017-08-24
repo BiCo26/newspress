@@ -16,7 +16,8 @@ usersController.create = (req, res) => {
       if (err) return next(err);
       res.json({
         message: 'ok',
-        user: user,
+        user: {id: user.id,
+               username:user.username},
         auth: true,
       })
     });
