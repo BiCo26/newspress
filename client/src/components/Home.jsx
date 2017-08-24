@@ -64,9 +64,9 @@ class Home extends Component {
   render() {
     return (
       <div >
-            {this.renderDefaultHomePage()}
-           {this.renderSelectSources()}
-          {this.renderHomePage()}
+           <h1>testing auth {this.props.auth}</h1>
+           <h1>testing id   {this.props.id}</h1>
+            
       </div>
     )
   }
