@@ -28,19 +28,11 @@
     "source": {
       "name": "Associated Press", 
       "code":"associated-press",
-      "image":"https://www.ap.org/explore/assets/img/ap-logo--horizontal.svg"
+      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Associated_Press_logo.svg/2000px-Associated_Press_logo.svg.png"
     }
   },
   {
     "id": "5",
-    "source": {
-      "name": "Ars Technica", 
-      "code":"ars-technica",
-      "img":"http://cdn.arstechnica.net/apple-touch-icon.png"
-    }
-  },
-  {
-    "id": "6",
     "source": {
       "name": "BBC News", 
       "code":"bbc-news",
@@ -48,7 +40,7 @@
     }
   },
   {
-    "id": "7",
+    "id": "6",
     "source": {
       "name": "BBC Sport", 
       "code":"bbc-sport",
@@ -56,7 +48,7 @@
     }
   },
   {
-    "id": "8",
+    "id": "7",
     "source": {
       "name": "Bild", 
       "code":"bild",
@@ -64,7 +56,7 @@
     }
   },
   {
-    "id": "9",
+    "id": "8",
     "source": {
       "name": "Bloomberg", 
       "code":"bloomberg",
@@ -72,7 +64,15 @@
     }
   },
   {
-    "id":"11",
+    "id": "9",
+    "source": {
+      "name": "Breitbart News", 
+      "code":"breitbart-news",
+      "img":"https://www.thewrap.com/wp-content/uploads/2016/11/Breitbart-logo.jpg"
+    }
+  },
+  {
+    "id":"10",
     "source": {
       "name":"Business Insider", 
       "code":"business-insider",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "id": "12",
+    "id": "11",
     "source": {
       "name": "Business Insider (UK)", 
       "code":"business-insider-uk",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "id": "13",
+    "id": "12",
     "source": {
       "name": "Buzzfeed", 
       "code":"buzzfeed",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "id": "14",
+    "id": "13",
     "source": {
       "name": "CNBC", 
       "code":"cbnc",
@@ -104,7 +104,7 @@
     }
   },
   {
-    "id": "15",
+    "id": "14",
     "source": {
       "name": "CNN", 
       "code":"cnn",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "id": "16",
+    "id": "15",
     "source": {
       "name": "Daily Mail", 
       "code":"daily-mail",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "id": "17",
+    "id": "16",
     "source": {
       "name": "Der Tagesspiegel", 
       "code":"der-tagesspiegel",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "id": "18",
+    "id": "17",
     "source": {
       "name": "Die Zeit", 
       "code":"die-zeit",
@@ -136,7 +136,7 @@
     }
   },
   {
-    "id": "19",
+    "id": "18",
     "source": {
       "name": "Engadget", 
       "code":"engadget",
@@ -144,12 +144,200 @@
     }
   },
   {
-    "id": "20",
+    "id": "19",
     "source": {
       "name": "Entertainment Weekly", 
       "code":"entertainment-weekly",
       "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
     }
+  },
+  {
+    "id": "20",
+    "source": {
+      "name": "ESPN", 
+      "code":"espn",
+      "img":"http://a.espncdn.com/combiner/i?img=/i/espn/espn_logos/espn_red.png"
+    }
+  },
+  {
+    "id": "21",
+    "source": {
+      "name": "ESPN Cric Info", 
+      "code":"espn-cric-info",
+      "img":"http://i.imgci.com/espncricinfo/mobile/CI_appicon_flat.png"
+    }
+  },
+  {
+    "id": "22",
+    "source": {
+      "name": "Financial Times", 
+      "code":"financial-times",
+      "img":"http://tadeletravel.com/wp2/wp-content/uploads/2016/04/Financial-Times-01.png"
+    }
+  },
+  {
+    "id": "23",
+    "source": {
+      "name": "Focus", 
+      "code":"focus",
+      "img":"https://images-na.ssl-images-amazon.com/images/I/51y10wmOiJL.png"
+    }
+  },
+  {
+    "id": "24",
+    "source": {
+      "name": "Football Italia", 
+      "code":"football-italia",
+      "img":"https://lh3.googleusercontent.com/WKFLO4cxBW1fMc3osKdQduotfp4XBLQr7NTGPEMmTGOx7XmLusYl5GHSEhti6b0Mj7U=w300"
+    }
+  },
+  {
+    "id": "25",
+    "source": {
+      "name": "Fortune", 
+      "code":"fortune",
+      "img":"http://beckcapitalmgmt.com/wp-content/uploads/2016/07/fortune-magazine-logo-788x443.jpg"
+    }
+  },
+  {
+    "id": "26",
+    "source": {
+      "name": "FourFourTwo", 
+      "code":"four-four-two",
+      "img":"https://www.fourfourtwo.com/sites/fourfourtwo.com/themes/fourfourtwo/images/logo-big.png"
+    }
+  },
+  {
+    "id": "27",
+    "source": {
+      "name": "Fox Sports", 
+      "code":"fox-sports",
+      "img":"https://upload.wikimedia.org/wikipedia/en/d/dd/Fox_Sports_Logo.png"
+    }
+  },
+  {
+    "id": "28",
+    "source": {
+      "name": "Google News", 
+      "code":"google-news",
+      "img":"http://searchengineland.com/figz/wp-content/seloads/2011/08/google-news-logo-square.jpg"
+    }
+  },
+  {
+    "id": "29",
+    "source": {
+      "name": "Gruenderszene", 
+      "code":"gruenderszene",
+      "img":"http://start-up-initiative.ey.com/wp-content/uploads/2016/06/01_logo-gruenderszene.jpg"
+    }
+  },
+  {
+    "id": "30",
+    "source": {
+      "name": "Hacker News", 
+      "code":"hacker-news",
+      "img":"http://a4.mzstatic.com/us/r30/Purple7/v4/0e/47/bd/0e47bd29-ec98-bf70-d363-e1c78d40893f/icon175x175.png"
+    }
+  },
+  {
+    "id": "31",
+    "source": {
+      "name": "Handelsblatt", 
+      "code":"Handelsblatt",
+      "img":"https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAA0BAAAAJDRjYjljZDE4LTUwYjAtNGFhMy04MGNhLWNmY2JlYzJjMzI3Yg.png"
+    }
+  },
+  {
+    "id": "32",
+    "source": {
+      "name": "IGN", 
+      "code":"ign",
+      "img":"https://lastfm-img2.akamaized.net/i/u/avatar300s/c6fa72f0fd7943f4a5afd1a0a218d9a5.jpg"
+    }
+  },
+  {
+    "id": "33",
+    "source": {
+      "name": "Independent", 
+      "code":"independent",
+      "img":"http://www.10magazine.com/wp-content/uploads/2016/02/latigre-indy-eagle-01.png"
+    }
+  },
+  {
+    "id": "34",
+    "source": {
+      "name": "Mashable", 
+      "code":"mashable",
+      "img":"https://cdn.builtinla.com/sites/www.builtinla.com/files/imagecache/opengraph/company_logos/mashable-logo.png"
+    }
+  },
+  {
+    "id": "35",
+    "source": {
+      "name": "Metro", 
+      "code":"Metro",
+      "img":"http://maxgala.com/wp-content/uploads/2015/12/Metronews-logo-with-10A4EA2-LOGOwURL-ALLGREEN.png"
+    }
+  },
+  {
+    "id": "36",
+    "source": {
+      "name": "Mirror", 
+      "code":"Mirror",
+      "img":"http://www.mobilityroadshow.co.uk/js/kcfinder/upload/images/Daily_Mirror_logo%281%29.jpg"
+    }
+  },
+  {
+    "id": "37",
+    "source": {
+      "name": "MTV News", 
+      "code":"mtv-news",
+      "img":"https://d21buns5ku92am.cloudfront.net/33601/images/176112-MTV%20News%20Logo-2e532b-large-1439299435.png"
+    }
+  },
+  {
+    "id": "38",
+    "source": {
+      "name": "MTV News (UK)", 
+      "code":"mtv-news-uk",
+      "img":"https://pbs.twimg.com/profile_images/1801520411/MTV_News_Logo_Black.png"
+    }
+  },
+  {
+    "id": "39",
+    "source": {
+      "name": "National Geographic", 
+      "code":"national-geographic",
+      "img":"https://prowly-uploads.s3.amazonaws.com/uploads/press_kit/file_name/9705/NG_LOGO_black.png"
+    }
+  },
+  {
+    "id": "40",
+    "source": {
+      "name": "New Scientist", 
+      "code":"new-scientist",
+      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+    }
+  },
+  {
+    "id": "41",
+    "source": {
+      "name": "Newsweek", 
+      "code":"newsweek",
+      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+    }
+  },
+  {
+    "id": "42",
+    "source": {
+      "name": "Newsweek", 
+      "code":"newsweek",
+      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+    }
   }
-
+  
 ]
+
+
+
+

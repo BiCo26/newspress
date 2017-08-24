@@ -92,7 +92,10 @@ header {
 .logo {
   font-size: 3vw;
 }
-
+ul{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .source_icon{
   height: 80px;
