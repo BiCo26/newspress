@@ -36,7 +36,7 @@
     "source": {
       "name": "BBC News", 
       "code":"bbc-news",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://static1.squarespace.com/static/52c94f4ce4b097374c3a763c/537a44bee4b0fc68f336b2a1/575d7a2645bf2196ee6d39a9/1476194052548/bbc-news.png?format=1000w"
     }
   },
   {
@@ -44,7 +44,7 @@
     "source": {
       "name": "BBC Sport", 
       "code":"bbc-sport",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2016/07/01/715b8dcc-c49a-4774-b52d-cc0d5d73b932/BBC-Sport.png"
     }
   },
   {
@@ -52,7 +52,7 @@
     "source": {
       "name": "Bild", 
       "code":"bild",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Logo_BILD.svg/567px-Logo_BILD.svg.png"
     }
   },
   {
@@ -60,7 +60,7 @@
     "source": {
       "name": "Bloomberg", 
       "code":"bloomberg",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/4/4d/Bloomberg_News_logo.png"
     }
   },
   {
@@ -330,9 +330,34 @@
   {
     "id": "42",
     "source": {
-      "name": "Newsweek", 
-      "code":"newsweek",
-      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+      "name": "New York Magazine", 
+      "code":"new-york-magazine",
+      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
+    }
+  },
+  {
+    "id": "43",
+    "source": {
+      "name": "NFL News", 
+      "code":"nfl-news",
+      "img":"http://www.mercadofichas.com/media/teams/thumbnails/NFL-logo.png"
+      
+    }
+  },
+  {
+    "id": "44",
+    "source": {
+      "name": "New York Magazine", 
+      "code":"new-york-magazine",
+      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
+    }
+  },
+  {
+    "id": "45",
+    "source": {
+      "name": "New York Magazine", 
+      "code":"new-york-magazine",
+      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
     }
   }
   
