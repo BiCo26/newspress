@@ -18,6 +18,7 @@ class SourceChoices extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+
  
 	handleClick(source_object) {
       console.log(source_object,'ioefjsoejfoi');
