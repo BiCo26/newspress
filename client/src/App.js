@@ -19,12 +19,16 @@ class App extends Component {
     this.state = {
       auth: false,
       user: null,
-      currentPage: 'home'
+      currentPage: 'home',
+      userSourcesApp:null,
+      userSourcesAppLoaded:false
     }
     this.setPage = this.setPage.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
+
+    this.retrieveUserSources=this.retrieveUserSources.bind(this);
    }
 
   // PAGINATION
@@ -55,7 +59,8 @@ class App extends Component {
       default:
         break;
       case 'selectSources': 
-        return  <SelectSources  auth={this.state.auth} userInfo={this.state.user}/>
+        return  <SelectSources  auth={this.state.auth} userInfo={this.state.user} 
+        retrieveUserSources={this.retrieveUserSources}/>
 
     }
   }
@@ -105,6 +110,22 @@ class App extends Component {
       });
     }).catch(err => console.log(err));
 } 
+
+//GETTING user sources
+ retrieveUserSources(sources_input_from_Back){
+      //checking if the data was retieved
+        if (sources_input_from_Back){
+          console.log("sources are in-see below");
+          console.log(sources_input_from_Back);
+        }
+       //setting the state of parent component-App.js
+         this.setState({
+           userSourcesApp:sources_input_from_Back,
+           userSourcesAppLoaded:true, 
+        })
+
+    }
+
 
 
   render() {
