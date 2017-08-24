@@ -41,7 +41,7 @@ class App extends Component {
       case 'home':
       if (this.state.auth) 
         return <p className="defualtTag">you are logged in</p>
-        // return <Home auth={this.state.auth} userInfo={this.state.user}/>;
+        //return <Home auth={this.state.auth} userInfo={this.state.user}/>;
       else return <DefaultHome/>
         break;
       case 'login':
@@ -51,6 +51,9 @@ class App extends Component {
         return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
       default:
         break;
+      case 'selectSources':
+        return  <SelectSources />
+
     }
   }
 
@@ -85,7 +88,7 @@ class App extends Component {
       this.setState({  
         auth: res.data.auth,
         user: res.data.user,
-        currentPage: 'home',
+        currentPage: 'selectSources',
       });
     }).catch(err => console.log(err));
   }
