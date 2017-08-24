@@ -2,7 +2,7 @@ import React, {
 	Component
 } from 'react';
 
-import sources from "../data/defualtSources";
+import sources from "../data/mainSources";
 import axios from 'axios';
 
 class SourceChoices extends Component {
