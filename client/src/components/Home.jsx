@@ -63,13 +63,12 @@ class Home extends Component {
     renderHomePage(){
         if (typeof this.state.sourcesData !== undefined){
             console.log ("ready"); 
-            console.log ("the data" + this.state.souresData)
+            console.log ("the data" + this.state.sourcesData)
             console.log (typeof this.state.sourcesData )
           return this.state.sourcesData.map(source => {
         return (
-          <div>  
+          <div> 
             <h1 className="userHome_source"> Viewing News From {source.source_code}</h1>
-            <h1>bob {this.props.userID}</h1>
             <GetNews source={source.source_code} userID={this.props.userID }/>
           </div>
         );
