@@ -10,7 +10,7 @@ import Home from './components/Home';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/Header'
+import Header from './components/header'
 
 class App extends Component {
    constructor() {
@@ -38,6 +38,7 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
+      if (!this.state.auth) {/*return <Default/>*/}
         return <Home/>;
         break;
       case 'login':
@@ -50,6 +51,8 @@ class App extends Component {
     }
   }
 
+  
+
   // AUTH
   handleLoginSubmit(e, username, password) {
     e.preventDefault();
@@ -57,6 +60,8 @@ class App extends Component {
       username,
       password,
     }).then(res => {
+      console.log ("66"+ res.data.user.id); 
+      console.log ("66"+ res.data.user.username); 
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
@@ -94,6 +99,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header setPage={this.setPage} logOut={this.logOut}/>
+        {this.decideWhichPage()}
+
          <Home/ >
 
         {/* <SelectSources/> */}
