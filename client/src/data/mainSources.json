@@ -63,20 +63,13 @@
       "img":"https://upload.wikimedia.org/wikipedia/commons/4/4d/Bloomberg_News_logo.png"
     }
   },
-  {
-    "id": "9",
-    "source": {
-      "name": "Breitbart News", 
-      "code":"breitbart-news",
-      "img":"https://www.thewrap.com/wp-content/uploads/2016/11/Breitbart-logo.jpg"
-    }
-  },
+
   {
     "id":"10",
     "source": {
       "name":"Business Insider", 
       "code":"business-insider",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://static2.businessinsider.com/image/544e9ea56bb3f7554c911e8d-800-440/bilogo-"
     }
   },
   {
@@ -84,7 +77,7 @@
     "source": {
       "name": "Business Insider (UK)", 
       "code":"business-insider-uk",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://www.mediagene.co.jp/wp-content/uploads/2016/09/BI-2-540x312.jpg"
     }
   },
   {
@@ -100,7 +93,7 @@
     "source": {
       "name": "CNBC", 
       "code":"cbnc",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/2000px-CNBC_logo.svg.png"
     }
   },
   {
@@ -108,7 +101,7 @@
     "source": {
       "name": "CNN", 
       "code":"cnn",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://nppa.org/sites/default/files/CNN%20LOGO%20new.png"
     }
   },
   {
@@ -116,7 +109,7 @@
     "source": {
       "name": "Daily Mail", 
       "code":"daily-mail",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://shelliewallphotography.co.uk/wp-content/uploads/2015/11/daily_mail_main.png"
     }
   },
   {
@@ -124,7 +117,7 @@
     "source": {
       "name": "Der Tagesspiegel", 
       "code":"der-tagesspiegel",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/de/thumb/4/44/Tagesspiegel-Logo.svg/2000px-Tagesspiegel-Logo.svg.png"
     }
   },
   {
@@ -132,7 +125,7 @@
     "source": {
       "name": "Die Zeit", 
       "code":"die-zeit",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/en/thumb/d/da/Die_Zeit.svg/1280px-Die_Zeit.svg.png"
     }
   },
   {
@@ -140,7 +133,7 @@
     "source": {
       "name": "Engadget", 
       "code":"engadget",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://logonoid.com/images/engadget-logo.png"
     }
   },
   {
@@ -148,7 +141,7 @@
     "source": {
       "name": "Entertainment Weekly", 
       "code":"entertainment-weekly",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://microsites.ew.com/microsite/media-kit/2017/images/ew%20large%20logo.png?crc=462297111"
     }
   },
   {
@@ -324,7 +317,7 @@
     "source": {
       "name": "Newsweek", 
       "code":"newsweek",
-      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+      "img":"https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/22/21501/full-562x156/567036c5/Newsweek-logo-1986.png?resolution=0"
     }
   },
   {
@@ -332,7 +325,7 @@
     "source": {
       "name": "New York Magazine", 
       "code":"new-york-magazine",
-      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
+      "img":"http://68.media.tumblr.com/c5e02ad43b648a43505766766fae3852/tumblr_nu3sldWmD61s07vpzo1_1280.jpg"
     }
   },
   {
@@ -347,17 +340,138 @@
   {
     "id": "44",
     "source": {
-      "name": "New York Magazine", 
-      "code":"new-york-magazine",
-      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
+      "name": "Polygon", 
+      "code":"polygon",
+      "img":"http://www.indiecade.com/images/news_articles/polygon-logo.png"
     }
   },
   {
     "id": "45",
     "source": {
-      "name": "New York Magazine", 
-      "code":"new-york-magazine",
-      "img":"http://cdn.embed.ly/providers/logos/nymag.png"
+      "name": "Recode", 
+      "code":"recode",
+      "img":"http://1xdh0c2vx1s41ew8c51fqixz.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/Logo-Variations_re-code-copy.png"
+    }
+  },
+  {
+    "id": "46",
+    "source": {
+      "name": "Reddit/r/all", 
+      "code":"reddit-r-all",
+      "img":"https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Reddit_logo_and_wordmark.svg/1280px-Reddit_logo_and_wordmark.svg.png"
+    }
+  },
+  {
+    "id": "47",
+    "source": {
+      "name": "Reuters", 
+      "code":"reuters",
+      "img":"https://agency.reuters.com/content/dam/openweb/images/brand-assets/reuters-logos/rtr_ahz_rgb_pos1.png/_jcr_content/renditions/original"
+    }
+  },
+  {
+    "id": "48",
+    "source": {
+      "name": "Spiegel Online", 
+      "code":"spiegel-online",
+      "img":"http://cdn.embed.ly/providers/logos/spiegel.png"
+    }
+  },
+  {
+    "id": "49",
+    "source": {
+      "name": "T3n", 
+      "code":"t3n",
+      "img":"https://parkpocket.com/_common/img/logos/t3n.png"
+    }
+  },
+  
+  {
+    "id": "50",
+    "source": {
+      "name": "TalkSport", 
+      "code":"talksport",
+      "img":"http://www.corporateguidelines.com/talksport/images/talkSPORT_football_NoFreq_STK_RGB.png"
+    }
+  },
+  {
+    "id": "51",
+    "source": {
+      "name": "TechCrunch", 
+      "code":"techCrunch",
+      "img":"https://arpr.com/app/uploads/2016/10/techcrunch-logo.png"
+    }
+  },
+  {
+    "id": "52",
+    "source": {
+      "name": "TechRadar", 
+      "code":"techradar",
+      "img":"http://www.deepfreeze.it/img/j_logos/logo_techradar.png"
+    }
+  },
+  {
+    "id": "53",
+    "source": {
+      "name": "The Economist", 
+      "code":"the-economist",
+      "img":"http://logos-download.com/wp-content/uploads/2016/05/The_Economist_logo.png"
+    }
+  },
+  {
+    "id": "54",
+    "source": {
+      "name": "The Guardian (AU)", 
+      "code":"the-guardian-au",
+      "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/The_Guardian_2.svg/2000px-The_Guardian_2.svg.png"
+    }
+  },
+  {
+    "id": "55",
+    "source": {
+      "name": "The Guardian (UK)", 
+      "code":"the-guardian-uk",
+      "img":"http://www.userlogos.org/files/logos/sogol%20resu/guardian.co.uk.png"
+    }
+  },
+  {
+    "id": "56",
+    "source": {
+      "name": "The Hindu", 
+      "code":"the-hindu",
+      "img":"http://www.ftcash.com/assets/img/press/thehindu.png"
+    }
+  },
+  {
+    "id": "57",
+    "source": {
+      "name": "The Huffington Post", 
+      "code":"the-huffington-post",
+      "img":"http://mutualrescue.org/wp-content/uploads/2016/12/press-logo-huffington-post.png"
+    }
+  },
+  {
+    "id": "58",
+    "source": {
+      "name": "The Lad Bible", 
+      "code":"the-lad-bible",
+      "img":"http://spiceukonline.com/wp-content/uploads/2015/12/The-LAD-Bible-Logo-EPS-vector-image.png"
+    }
+  },
+  {
+    "id": "59",
+    "source": {
+      "name": "The Lad Bible", 
+      "code":"the-lad-bible",
+      "img":"http://spiceukonline.com/wp-content/uploads/2015/12/The-LAD-Bible-Logo-EPS-vector-image.png"
+    }
+  },
+  {
+    "id": "60",
+    "source": {
+      "name": "The New York Times", 
+      "code":"the-new-york-times",
+      "img":"https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png"
     }
   }
   
