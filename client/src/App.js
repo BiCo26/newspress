@@ -39,9 +39,12 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
-      if (this.state.auth) 
-        return <p className="defualtTag">you are logged in</p>
-        //return <Home auth={this.state.auth} userInfo={this.state.user}/>;
+      if (this.state.auth){
+          console.log ("testing auth ++"+ this.state.auth)
+          console.log ("testing id ++"+ this.state.user.id)
+          //return <p className="defualtTag">you are logged in</p>
+          return <Home auth={this.state.auth} userInfo={this.state.user}/>;
+      }
       else return <DefaultHome/>
         break;
       case 'login':
@@ -51,8 +54,8 @@ class App extends Component {
         return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
       default:
         break;
-      case 'selectSources':
-        return  <SelectSources />
+      case 'selectSources': 
+        return  <SelectSources  auth={this.state.auth} userInfo={this.state.user}/>
 
     }
   }
@@ -102,12 +105,7 @@ class App extends Component {
       });
     }).catch(err => console.log(err));
 } 
-// 
-renderHomeIfloggedin(){
-  if (this.state.auth){
-    return  <Home auth={this.state.auth} userInfo={this.state.user}/>
-  }
-}
+
 
   render() {
     return (
