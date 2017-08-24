@@ -7,10 +7,11 @@ import GetNews from './components/GetNews';
 import SourcesInput from './components/SourcesInput';
 import SelectSources from './components/SelectSources';
 import Home from './components/Home';
+import DefaultHome from './components/DefaultHome';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/header'
+import Header from './components/Header'
 
 class App extends Component {
    constructor() {
@@ -18,7 +19,7 @@ class App extends Component {
     this.state = {
       auth: false,
       user: null,
-      currentPage: 'home',
+      currentPage: 'home'
     }
     this.setPage = this.setPage.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
@@ -38,8 +39,10 @@ class App extends Component {
   decideWhichPage() {
     switch(this.state.currentPage) {
       case 'home':
-      if (!this.state.auth) {/*return <Default/>*/}
-        return <Home/>;
+      if (this.state.auth) 
+        return <p className="defualtTag">you are logged in</p>
+        // return <Home auth={this.state.auth} userInfo={this.state.user}/>;
+      else return <DefaultHome/>
         break;
       case 'login':
         return <Login handleLoginSubmit={this.handleLoginSubmit} />;
@@ -60,14 +63,16 @@ class App extends Component {
       username,
       password,
     }).then(res => {
-      console.log ("66"+ res.data.user.id); 
-      console.log ("66"+ res.data.user.username); 
+      console.log ("55"+ res.data.user.id); 
+      console.log ("55"+ res.data.user.username); 
+      console.log ("55"+res.data.auth);
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
         currentPage: 'home',
       });
-      console.log(this.state.user)
+      console.log(this.state.auth)
+
     }).catch(err => console.log(err));
   }
 
@@ -94,13 +99,19 @@ class App extends Component {
       });
     }).catch(err => console.log(err));
 } 
+// 
+renderHomeIfloggedin(){
+  if (this.state.auth){
+    return  <Home auth={this.state.auth} userInfo={this.state.user}/>
+  }
+}
 
   render() {
     return (
       <div className="App">
         <Header setPage={this.setPage} logOut={this.logOut}/>
         {this.decideWhichPage()}
-         <Home/ >
+      
 
         {/* <SelectSources/> */}
         <p className="App-intro">
