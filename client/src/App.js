@@ -45,9 +45,11 @@ class App extends Component {
       case 'home':
       if (this.state.auth){
           console.log ("testing auth ++"+ this.state.auth)
-          console.log ("testing id ++"+ this.state.user.id)
+          console.log ("testing id ++"+ this.state.user)
+          console.log ("testing sources ++"+ this.state.userSourcesApp)
           //return <p className="defualtTag">you are logged in</p>
-          return <Home auth={this.state.auth} userInfo={this.state.user}/>;
+          return <Home auth={this.state.auth} userSources={this.state.userSourcesApp}
+          userID={this.state.user} />;
       }
       else return <DefaultHome/>
         break;
@@ -77,11 +79,35 @@ class App extends Component {
       console.log ("55"+ res.data.user.id); 
       console.log ("55"+ res.data.user.username); 
       console.log ("55"+res.data.auth);
-      this.setState({
-        auth: res.data.auth,
-        user: res.data.user,
-        currentPage: 'home',
+
+       this.setState({
+          user: res.data.user.id
+          
+       });
+
+      axios.post('/news/userSources',{user_id:res.data.user.id})
+        .then(response => {
+         
+          console.log ("upon login, got the users sources successfully");
+          console.log(response);
+          console.log("array "+response.data.data);
+          console.log("user id" +response.data.user_id);
+          this.setState({//this retieves the current users homepage data(sources)
+            auth: res.data.auth,
+            userSourcesApp:response.data.data,//user resources array
+            userSourcesAppLoaded:true,
+           
+            currentPage: 'home'
       });
+
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+
+      
       console.log(this.state.auth)
 
     }).catch(err => console.log(err));
@@ -93,6 +119,7 @@ class App extends Component {
       username,
       password,
     }).then(res => {
+    
       this.setState({  
         auth: res.data.auth,
         user: res.data.user,
@@ -107,7 +134,12 @@ class App extends Component {
       console.log(res);
       this.setState({
         auth: false,
+        userSourcesApp:null,//user resources array
+        userSourcesAppLoaded:false,
+        user: null,
+        currentPage: 'home'
       });
+      console.log ("logged out");
     }).catch(err => console.log(err));
 } 
 
@@ -118,11 +150,18 @@ class App extends Component {
           console.log("sources are in-see below");
           console.log(sources_input_from_Back);
         }
+
+        
        //setting the state of parent component-App.js
          this.setState({
-           userSourcesApp:sources_input_from_Back,
-           userSourcesAppLoaded:true, 
+           userSourcesApp:sources_input_from_Back.data,//user resources array
+           userSourcesAppLoaded:true,
+           userID: sources_input_from_Back.user_id,
+            currentPage: 'home'
         })
+
+        console.log("***************" +this.state.userID);
+        console.log("%%%%%%%%%%%%%%%" +this.state.userSourcesApp);
 
     }
 

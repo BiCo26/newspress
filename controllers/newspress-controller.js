@@ -22,7 +22,8 @@ newspressController.show = (req, res) => {
     .then(newspress => {
       res.json({
         message: 'ok',
-        data: newspress,
+        user_id:req.body.user_id,
+        data: newspress
       });
     })
     .catch(err => {

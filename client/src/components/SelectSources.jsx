@@ -20,7 +20,7 @@ class SourceChoices extends Component {
 
 
  
-	handleClick(source_object) {
+		handleClick(source_object) {
 
       console.log(source_object,'ioefjsoejfoi',this.props.userInfo.id);
 
@@ -46,6 +46,7 @@ class SourceChoices extends Component {
 
 	}
 
+
 	handleSubmit(event) {
         
         event.preventDefault();
@@ -53,12 +54,13 @@ class SourceChoices extends Component {
         axios.post('/news/userSources',{user_id:this.props.userInfo.id})
         .then(response => {
           console.log(response);
+           this.props.retrieveUserSources(response.data);
         })
         .catch(function (error) {
           console.log(error);
         });
 		
-        // this.props.retrieveUserSources
+       
            
  
 

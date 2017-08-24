@@ -6,8 +6,9 @@ const newspressController = require('../controllers/newspress-controller');
 
 
 // newspressRoute.post('/', newspressController.create);
-newspressRoutes.post('/',  newspressController.create);//B
+newspressRoutes.post('/', newspressController.create);//B
 newspressRoutes.post('/userSources', newspressController.show);
+
 // newspressroutes.get('/:id', newspressController.show);
 // newspressroutes.put('/:id', newspressController.update);
 // newspressroutes.delete('/:id', newspressController.destroy);
