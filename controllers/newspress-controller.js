@@ -17,8 +17,8 @@ newspressController.index  = (req, res) => {
 
 
 newspressController.show = (req, res) => {
-  console.log(req.body)
-  Newspress.findUserSources(req.body.user_id)
+  console.log(req.body.user_id, 'sjadoisjaodi', req.body)
+  Newspress.findUserSources({user_id: req.body.user_id})
     .then(newspress => {
       res.json({
         message: 'ok',
