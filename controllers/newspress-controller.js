@@ -31,11 +31,13 @@ newspressController.show = (req, res) => {
 };
 
 newspressController.create = (req, res) => {
-  console.log(req.body.source.source.name);
+  console.log(req.body.user_id, 'idjfosjdsofij');
+
   Newspress.create({
     source_name:req.body.source.source.name,
     source_code:req.body.source.source.code,
-    image_url:req.body.source.source.img
+    image_url:req.body.source.source.img,
+    user_id:req.body.user_id
   })
     .then(newspress => {
       console.log(newspress);

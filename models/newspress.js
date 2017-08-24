@@ -32,11 +32,11 @@ Newspress.create = newspress => {
   return db.one(
     `
     INSERT INTO sources
-    (image_url, source_name, source_code)
-    VALUES ($1, $2, $3)
+    (image_url, source_name, source_code,user_id)
+    VALUES ($1, $2, $3, $4)
     RETURNING *
   `,
-    [ newspress.image_url,newspress.source_name,newspress.source_code]//these are place holders
+    [ newspress.image_url,newspress.source_name,newspress.source_code, newspress.user_id]//these are place holders
   );
 };
 

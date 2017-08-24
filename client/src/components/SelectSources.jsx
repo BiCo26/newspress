@@ -21,10 +21,13 @@ class SourceChoices extends Component {
 
  
 	handleClick(source_object) {
-      
-      console.log(source_object,'ioefjsoejfoi');
+
+      console.log(source_object,'ioefjsoejfoi',this.props.userInfo.id);
+
 	  axios.post('/news', {
-        source: source_object
+        source: source_object,
+        user_id: this.props.userInfo.id
+
       })
       .then(res => {
 		console.log("Posted"+ source_object.source.name);
