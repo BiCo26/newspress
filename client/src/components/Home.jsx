@@ -26,8 +26,12 @@ class Home extends Component {
          recievedUserInfo:true, 
          auth:this.props.auth,
          sourcesLoaded:true,
-         sourcesData: userTestSources_Json
+         sourcesData: this.props.userSources//userTestSources_Json
        })
+
+       //console.log ( "user sources array: "+this.state.sourcesData);
+       console.log ("test props "+ this.props.userSources);
+       
     }
 
     returnSources(sources_input){
@@ -64,8 +68,9 @@ class Home extends Component {
           return this.state.sourcesData.map(source => {
         return (
           <div>  
-            <h1>{source.source.code}+++++++++++++++++++++++++++++++++++++++++++++++</h1>
-            <GetNews source={source.source.code}/>
+            <h1 className="userHome_source"> Viewing News From {source.source_code}</h1>
+            <h1>bob {this.props.userID}</h1>
+            <GetNews source={source.source_code} userID={this.props.userID }/>
           </div>
         );
       });
@@ -76,7 +81,7 @@ print(){
     return(
         <div>
           <h1>testing auth true</h1>
-          <h1>{this.props.userInfo.username}</h1>
+          {/*<h1>{this.props.userInfo.username}</h1>*/}
           {this.renderHomePage()}
         </div>
     )
