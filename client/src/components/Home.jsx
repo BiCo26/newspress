@@ -4,19 +4,30 @@ import React, { Component } from 'react';
 import SourcesInput from './SourcesInput';
 import SelectSources from './SelectSources';
 import GetNews from './GetNews';
+import userTestSources_Json from "../data/testUserSources";
 
 
 class Home extends Component {
     constructor(props) {
     super(props);
         this.state = {
-        sourceData:null,
-        dataLoaded: false,
-        default:[]
-        
+        recievedUserInfo:false, 
+        userInfo:null, 
+        auth:false,
+        sourcesLoaded:false,
+        sourcesData:null,        
     }
     
         this.returnSources=this.returnSources.bind(this);
+    }
+
+    componentDidMount(){
+       this.setState({
+         recievedUserInfo:true, 
+         auth:this.props.auth,
+         sourcesLoaded:true,
+         sourcesData: userTestSources_Json
+       })
     }
 
     returnSources(sources_input){
@@ -46,10 +57,11 @@ class Home extends Component {
       }
     }
     renderHomePage(){
-        if (this.state.dataLoaded){
+        if (typeof this.state.sourcesData !== undefined){
             console.log ("ready"); 
-            console.log (this.state.soureData)
-          return this.state.sourceData.map(source => {
+            console.log ("the data" + this.state.souresData)
+            console.log (typeof this.state.sourcesData )
+          return this.state.sourcesData.map(source => {
         return (
           <div>  
             <h1>{source.source.code}+++++++++++++++++++++++++++++++++++++++++++++++</h1>
@@ -58,15 +70,23 @@ class Home extends Component {
         );
       });
     }
-    }
-        
+}
+print(){
+  if (this.state.auth){
+    return(
+        <div>
+          <h1>testing auth true</h1>
+          <h1>{this.props.userInfo.username}</h1>
+          {this.renderHomePage()}
+        </div>
+    )
+  }
+}
 
   render() {
     return (
       <div >
-           <h1>testing auth {this.props.auth}</h1>
-           <h1>testing id   {this.props.id}</h1>
-            
+           {this.print()}
       </div>
     )
   }

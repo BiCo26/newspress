@@ -21,7 +21,9 @@ class SourceChoices extends Component {
 
  
 	handleClick(source_object) {
+
       console.log(source_object,'ioefjsoejfoi',this.props.userInfo.id);
+
 	  axios.post('/news', {
         source: source_object,
         user_id: this.props.userInfo.id
@@ -47,8 +49,8 @@ class SourceChoices extends Component {
 	handleSubmit(event) {
 
 		event.preventDefault();
-		this.props.test(this.state.sourceInputArray)
-		console.log(this.state.sourceInputArray);
+		this.props.retrieveUserSources(/*enter user sources here*/);
+
 
 	}
         render() {
