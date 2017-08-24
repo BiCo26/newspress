@@ -50,8 +50,8 @@ class SourceChoices extends Component {
         
         event.preventDefault();
         
-        axios.get('/news',{user_id:this.props.userInfo.id})
-        .then(function (response) {
+        axios.post('/news/userSources',{user_id:this.props.userInfo.id})
+        .then(response => {
           console.log(response);
         })
         .catch(function (error) {
