@@ -1,0 +1,90 @@
+  [{
+    "id": "9",
+    "source": {
+      "name": "Bloomberg", 
+      "code":"bloomberg",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id":"11",
+    "source": {
+      "name":"Business Insider", 
+      "code":"business-insider",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "12",
+    "source": {
+      "name": "Business Insider (UK)", 
+      "code":"business-insider-uk",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "13",
+    "source": {
+      "name": "Buzzfeed", 
+      "code":"buzzfeed",
+      "img":"http://www.investors.com/wp-content/uploads/2016/10/buzzfeedlogo-ec.jpg"    
+    }
+  },
+  {
+    "id": "14",
+    "source": {
+      "name": "CNBC", 
+      "code":"cbnc",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "15",
+    "source": {
+      "name": "CNN", 
+      "code":"cnn",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "16",
+    "source": {
+      "name": "Daily Mail", 
+      "code":"daily-mail",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "17",
+    "source": {
+      "name": "Der Tagesspiegel", 
+      "code":"der-tagesspiegel",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "18",
+    "source": {
+      "name": "Die Zeit", 
+      "code":"die-zeit",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "19",
+    "source": {
+      "name": "Engadget", 
+      "code":"engadget",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  },
+  {
+    "id": "20",
+    "source": {
+      "name": "Entertainment Weekly", 
+      "code":"entertainment-weekly",
+      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+    }
+  }
+
+]

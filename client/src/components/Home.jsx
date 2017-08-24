@@ -40,6 +40,11 @@ class Home extends Component {
         }
     }
 
+    renderDefaultHomePage(){
+      if (!this.props.auth){
+        console.log(this.props.auth + "checking for auth");
+      }
+    }
     renderHomePage(){
         if (this.state.dataLoaded){
             console.log ("ready"); 
@@ -59,6 +64,7 @@ class Home extends Component {
   render() {
     return (
       <div >
+            {this.renderDefaultHomePage()}
            {this.renderSelectSources()}
           {this.renderHomePage()}
       </div>

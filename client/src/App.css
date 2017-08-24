@@ -101,3 +101,7 @@ header {
 .source_icon_container{
   border-style: dotted dashed solid double;
 }
+.defualtTag{
+  font-size: 50px;
+  background: yellow; 
+}
