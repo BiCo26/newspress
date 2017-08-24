@@ -71,7 +71,6 @@ nav ul{
   display: flex;
   flex-direction: row;
   justify-content: center;
-   list-style-type: none;
 }
 
 nav li {
@@ -95,7 +94,14 @@ header {
 ul{
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
 }
+li{
+  width: 29%;
+  list-style: none;
+  padding: 2%;
+}
+
 
 .source_icon{
   height: 80px;
