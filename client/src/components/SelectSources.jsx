@@ -67,12 +67,12 @@ class SourceChoices extends Component {
 	}
         render() {
                     return <div className="source_choices">
-                        <ul>
-                        <p>{this.props.test}</p>
                         <form name="sources-form" onSubmit={this.handleSubmit}>
                             <input  className="search" type="text"  name="sourceVal" placeholder='Enter a source here' onChange={this.handleChange}/>
                             <input className=" addSource" type="submit"  value="add" />
                         </form>
+                        <ul>
+                        <p>{this.props.test}</p>
                         {sources.map(source=>{
                         return (
                         <li >
