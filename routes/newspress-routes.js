@@ -4,7 +4,7 @@ const newspressRoutes = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
 const newspressController = require('../controllers/newspress-controller');
 
-newspressRoutes.get('/', newspressController.index);
+newspressRoutes.get('/', newspressController.show);
 // newspressRoute.post('/', newspressController.create);
 newspressRoutes.post('/',  newspressController.create);//B
 

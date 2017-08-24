@@ -47,10 +47,20 @@ class SourceChoices extends Component {
 	}
 
 	handleSubmit(event) {
-
-		event.preventDefault();
-		this.props.retrieveUserSources(/*enter user sources here*/);
-
+        
+        event.preventDefault();
+        
+        axios.get('/news',{user_id:this.props.userInfo.id})
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+		
+        // this.props.retrieveUserSources
+           
+ 
 
 	}
         render() {
