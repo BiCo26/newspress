@@ -18,13 +18,13 @@ Newspress.userSources = id => {
   `, [id]);
 };
 
-Newspress.findById = id => {
+Newspress.findUserSources = id => {
   return db.oneOrNone(
     `
-    SELECT * FROM newspress
-    WHERE id = $1
+    SELECT * FROM sources
+    WHERE user_id = $1
   `,
-    [id]
+    [id.user_id]
   );
 };
 
