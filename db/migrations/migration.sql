@@ -31,8 +31,9 @@ CREATE TABLE IF NOT EXISTS articles (
 
 CREATE TABLE if NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
-  username VARCHAR(255) REFERENCES users(username),
-  topic VARCHAR(255)
+  username VARCHAR(255) ,
+  topic VARCHAR(255),
+  article_title VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE if NOT EXISTS comments (
