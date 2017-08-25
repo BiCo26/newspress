@@ -132,6 +132,7 @@ class App extends Component {
       this.setState({  
         auth: res.data.auth,
         user: res.data.user.id,
+        userName:res.data.user.username,
         currentPage: 'selectSources',
       });
     }).catch(err => console.log(err));

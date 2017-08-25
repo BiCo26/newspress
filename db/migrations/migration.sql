@@ -33,7 +33,7 @@ CREATE TABLE if NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
   username VARCHAR(255) ,
   topic VARCHAR(255),
-  article_id INT 
+  article_title VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE if NOT EXISTS comments (

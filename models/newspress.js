@@ -69,22 +69,22 @@ Newspress.userArticles = id => {
 Newspress.topic = topic => {
   return db.one(`
   INSERT INTO posts
-  (username, topic, article_id)
+  (username, topic, article_title)
   VALUES ($1, $2, $3)
   RETURNING *
   `,
-  [topic.username, topic.topic, topic.article_id]
+  [topic.username, topic.topic, topic.article_title]
 );
 };
 
-Newspress.findArticleTopics = id => {
+Newspress.findArticleTopics = title => {
   return db.query(
     `
     SELECT * FROM posts
-    WHERE article_id = $1 
+    WHERE article_title = $1 
     ORDER by id DESC
     `,
-    [id]
+    [title]
   );
 };
 

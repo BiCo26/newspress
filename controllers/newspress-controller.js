@@ -83,7 +83,7 @@ newspressController.createTopic = (req, res) => {
   Newspress.topic({
     username:req.body.username,
     topic:req.body.topic,
-    article_id:req.body.article_id
+    article_title:req.body.article_title
   })
   .then(topics =>{
     res.json({
@@ -101,7 +101,7 @@ newspressController.showTopic = (req, res) => {
   console.log('we are at getting controller')
   console.log(req.body.article_id)
   console.log(req.params.id)
-  Newspress.findArticleTopics(req.params.id)
+  Newspress.findArticleTopics(req.params.title)
     .then(topics=> {
       console.log(topics)
       res.json({

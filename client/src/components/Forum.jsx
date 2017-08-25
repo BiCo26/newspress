@@ -8,17 +8,15 @@ class Forum extends Component{
         this.state = {
             topic: null,
             posts: [],
-            username: 'Hao',
-            article_id: 2
         }
      this.contentUpdate = this.contentUpdate.bind(this);  
      this.handleTopicSubmit = this.handleTopicSubmit.bind(this); 
     }
 // call the api to get all topics in the database
     componentDidMount(){
-     axios.get(`/news/topic/${this.state.article_id}`, {
+     axios.get(`/news/topic/${this.props.article_title}`, {
         params: {
-            id:this.state.article_id
+            title:this.props.article_title
         }
      }).then(res => {
          console.log('we are back to react')
@@ -30,12 +28,12 @@ class Forum extends Component{
     }
 
 // when a new topic is posting, link to backend to add data in posts table
-    handleTopicSubmit(username,article_id) {
-      console.log(this.state.username)  
+    handleTopicSubmit(username,article_title) {
+      console.log(this.props.username)  
       axios.post('/news/topic', {
-      username: this.state.username,
+      username: this.props.username,
       topic: this.state.topic,
-      article_id: this.state.article_id
+      article_title: this.props.article_title
     }).then(res => {
         this.renderCurrentTopics()
     }).catch(err => console.log(err));
@@ -60,7 +58,7 @@ class Forum extends Component{
     render(){
     return( <div classNmae='forum'> 
              <div classNmae='postnewtopic'>
-            <form onSubmit={(e) => this.handleTopicSubmit(this.props.username, this.props.article_id)}>
+            <form onSubmit={(e) => this.handleTopicSubmit(this.props.username, this.props.article_title)}>
                 <textarea value={this.state.topic} onChange={this.contentUpdate}/>
                 <input type='submit' value='Post'/>
             </form>
