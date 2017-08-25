@@ -10,6 +10,7 @@ newspressRoutes.post('/', newspressController.create);//B
 newspressRoutes.post('/userSources', newspressController.show);
 newspressRoutes.post('/saveArticle', newspressController.saveArticle);
 newspressRoutes.post('/userSavedArticles', newspressController.getUserSavedArticles);
+newspressRoutes.post('/deleteSource', newspressController.destroySource);
 
 // newspressroutes.get('/:id', newspressController.show);
 // newspressroutes.put('/:id', newspressController.update);

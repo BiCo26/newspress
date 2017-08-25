@@ -95,12 +95,11 @@ newspressController.getUserSavedArticles = (req, res) => {
 }
 
 
-newspressController.destroy = (req, res) => {
-  Newspress.destroy(req.params.id)
+newspressController.destroySource = (req, res) => {
+  Newspress.destroy({source_id:req.body.source_id})
     .then(newspress => {
       res.json({
         message: 'ok',
-        data: newspress,
       });
     })
     .catch(err => {
