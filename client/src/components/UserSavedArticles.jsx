@@ -9,7 +9,9 @@ class UserSavedArticles extends Component {
     this.state = {
       savedArticlesArray: null,
       dataLoaded: false, 
+      fireRedirect: false
     }
+     this.deleteSavedArticle = this.deleteSavedArticle.bind(this);
 }
 
 
@@ -28,6 +30,19 @@ componentWillMount(){
     });
 }
 
+deleteSavedArticle(articleID) {
+      console.log("the articke ID is========= " +articleID);
+    /*axios.delete(`/news/${this.props.match.params.id}`) 
+      .then(res => {
+        console.log(res);
+        this.setState({
+          fireRedirect: true,
+        });
+      }).catch(err => {
+        console.log(err);
+      });*/
+  }
+
 
 
 
@@ -38,11 +53,14 @@ renderSavedArticles(){
       return this.state.savedArticlesArray.map(article => {
         return (
          <div>   
-            <h1 className="userArticle">Viewing User Saved Article</h1>   
+            <div className="userArticle">Viewing User Saved Article
+                 <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>
+            </div>   
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <img src={article.image_url}/>
             <Forum username={this.props.userName} article_title={article.title}/>
+
           </div>
         );
       });
