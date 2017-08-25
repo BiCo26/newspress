@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS newspress_dev;
 CREATE DATABASE newspress_dev;
-\c newspress_dev
+-- \c newspress_dev
 
 
 CREATE TABLE IF NOT EXISTS users (
