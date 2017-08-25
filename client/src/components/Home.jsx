@@ -60,8 +60,12 @@ class Home extends Component {
         console.log(this.props.auth + "checking for auth");
       }
     }
-    renderHomePage(){
-        if (typeof this.state.sourcesData !== undefined){
+    renderHomePage(){ 
+    
+      if (!this.state.sourcesData){
+      return <p className="message">No Sources Saved</p>;
+      }
+      else if (this.state.sourcesData){
             console.log ("ready"); 
             console.log ("the data" + this.state.sourcesData)
             console.log (typeof this.state.sourcesData )
@@ -74,23 +78,14 @@ class Home extends Component {
         );
       });
     }
+
 }
-print(){
-  if (this.state.auth){
-    return(
-        <div>
-          <h1>testing auth true</h1>
-          {/*<h1>{this.props.userInfo.username}</h1>*/}
-          {this.renderHomePage()}
-        </div>
-    )
-  }
-}
+
 
   render() {
     return (
       <div >
-           {this.print()}
+            {this.renderHomePage()}
       </div>
     )
   }
