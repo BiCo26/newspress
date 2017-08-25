@@ -48,8 +48,8 @@ constructor(props){
             <a href={this.props.articleData.url}  target="_blank" ><button type="button">View Article</button></a>
             <button type="button" onClick={()=>{this.handleClick(this.props.articleData, this.updateArticles)}}>Save Article</button>
             <h2 className = 'singleArticle_title'>{this.props.articleData.title}</h2>
+            <img className = 'articleImg' src={this.props.articleData.urlToImage} />
             <p>{this.props.articleData.description}</p>
-            <img src={this.props.articleData.urlToImage} />
           </div>
         )
       }
