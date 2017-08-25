@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS newspress_dev;
+CREATE DATABASE newspress_dev;
 \c newspress_dev
 
 
@@ -23,7 +25,7 @@ CREATE TABLE IF NOT EXISTS articles (
   title VARCHAR(255) NOT NULL,
   url VARCHAR(255) NOT NULL,
   image_url VARCHAR(255) NOT NULL,
-  source_id INT REFERENCES sources(id) 
+  user_id INT REFERENCES users(id) 
 );
 
 

@@ -49,7 +49,10 @@ class GetNews extends Component {
         if (this.state.apiDataLoaded) {
             return this.state.apiData.map(article => {
               return (
-              <SingleArticle key={article.title} articleData={article} />
+              
+                    
+              <SingleArticle key={article.title} articleData={article} userID={this.props.userID}/>
+       
               ); });
         } else return <p>Loading...</p>
         }

@@ -92,10 +92,18 @@ header {
 }
 .register_image_ul{
   display: flex;
+  /*flex-wrap: wrap;*/
+  width: 100vw;
+}
+
+.selectSourcesList{
+  display: flex;
   flex-wrap: wrap;
   width: 100vw;
 }
+
 .register_image_li{
+  
   width: 29%;
   list-style: none;
   padding: 2%;
@@ -111,4 +119,18 @@ header {
 .defaultTag{
   font-size: 50px;
   background: yellow; 
+}
+
+.userHome_source{
+  font-size: 50px;
+  background: blue;  
+}
+.userArticle{
+  font-size: 50px;
+  background: orange;  
+}
+
+.message{
+  font-size: 50px;
+  background: lightgreen;
 }

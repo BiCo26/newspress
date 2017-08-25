@@ -22,7 +22,8 @@ newspressController.show = (req, res) => {
     .then(newspress => {
       res.json({
         message: 'ok',
-        data: newspress,
+        user_id:req.body.user_id,
+        data: newspress
       });
     })
     .catch(err => {
@@ -53,16 +54,17 @@ newspressController.create = (req, res) => {
     });
 };
 
-newspressController.update = (req, res) => {
-  Newspress.update(
-    {
-      flavor: req.body.flavor,
-      description: req.body.description,
-      rating: req.body.rating,
-      url: req.body.url,
-      brand: req.body.brand,
+newspressController.saveArticle = (req, res) => {
+  console.log(req.body, 'disofjdosf',req.body.user_id)
+  Newspress.insertArticle(
+    { author: req.body.source.author,
+      description: req.body.source.description,
+      publishedAt: req.body.source.publishedAt,
+      title: req.body.source.title,
+      url: req.body.source.url,
+      image_url: req.body.source.urlToImage,
+      user_id: req.body.user_id,
     },
-    req.params.id,
   )
     .then(newspress => {
       res.json({
@@ -75,6 +77,23 @@ newspressController.update = (req, res) => {
       res.status(500).json({ err });
     });
 };
+
+
+newspressController.getUserSavedArticles = (req, res) => {
+  console.log ("we are in controller getting user articles for "+ req.body.Id);
+  Newspress.userArticles({Id: req.body.Id})
+    .then( articles => {
+        res.json({
+        user: req.user,
+        data: articles,
+        
+      });
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json({err: err});
+    });
+}
+
 
 newspressController.destroy = (req, res) => {
   Newspress.destroy(req.params.id)

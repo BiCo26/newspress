@@ -26,8 +26,12 @@ class Home extends Component {
          recievedUserInfo:true, 
          auth:this.props.auth,
          sourcesLoaded:true,
-         sourcesData: userTestSources_Json
+         sourcesData: this.props.userSources//userTestSources_Json
        })
+
+       //console.log ( "user sources array: "+this.state.sourcesData);
+       console.log ("test props "+ this.props.userSources);
+       
     }
 
     returnSources(sources_input){
@@ -56,37 +60,32 @@ class Home extends Component {
         console.log(this.props.auth + "checking for auth");
       }
     }
-    renderHomePage(){
-        if (typeof this.state.sourcesData !== undefined){
+    renderHomePage(){ 
+    
+      if (!this.state.sourcesData){
+      return <p className="message">No Sources Saved</p>;
+      }
+      else if (this.state.sourcesData){
             console.log ("ready"); 
-            console.log ("the data" + this.state.souresData)
+            console.log ("the data" + this.state.sourcesData)
             console.log (typeof this.state.sourcesData )
           return this.state.sourcesData.map(source => {
         return (
-          <div>  
-            <h1>{source.source.code}+++++++++++++++++++++++++++++++++++++++++++++++</h1>
-            <GetNews source={source.source.code}/>
+          <div> 
+            <h1 className="userHome_source"> Viewing News From {source.source_code}</h1>
+            <GetNews source={source.source_code} userID={this.props.userID }/>
           </div>
         );
       });
     }
+
 }
-print(){
-  if (this.state.auth){
-    return(
-        <div>
-          <h1>testing auth true</h1>
-          <h1>{this.props.userInfo.username}</h1>
-          {this.renderHomePage()}
-        </div>
-    )
-  }
-}
+
 
   render() {
     return (
       <div >
-           {this.print()}
+            {this.renderHomePage()}
       </div>
     )
   }
