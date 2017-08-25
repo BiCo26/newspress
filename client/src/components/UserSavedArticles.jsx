@@ -35,7 +35,7 @@ componentWillMount(){
 }
 
 deleteSavedArticle(articleID) {
-      console.log("the articke ID is========= " +articleID);
+    console.log("the articke ID is========= " +articleID);
     axios.post(`/news/deleteArticle`,{
       article_id:articleID
     }) 
