@@ -64,6 +64,53 @@ newspressController.saveArticle = (req, res) => {
       url: req.body.source.url,
       image_url: req.body.source.urlToImage,
       user_id: req.body.user_id,
+newspressController.createTopic = (req, res) => {
+  console.log('going through the newsController')
+  Newspress.topic({
+    username:req.body.username,
+    topic:req.body.topic,
+    article_id:req.body.article_id
+  })
+  .then(topics =>{
+    res.json({
+      message:'ok',
+      data: topics,
+    });
+  })
+  .catch(err =>{
+    console.log(err);
+    res.status(500).json({ err });
+  });
+};
+
+newspressController.showTopic = (req, res) => {
+  console.log('we are at getting controller')
+  console.log(req.body.article_id)
+  console.log(req.params.id)
+  Newspress.findArticleTopics(req.params.id)
+    .then(topics=> {
+      console.log(topics)
+      res.json({
+        message: 'ok',
+        data: topics.topic,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
+
+
+newspressController.update = (req, res) => {
+  Newspress.update(
+    {
+      flavor: req.body.flavor,
+      description: req.body.description,
+      rating: req.body.rating,
+      url: req.body.url,
+      brand: req.body.brand,
     },
   )
     .then(newspress => {

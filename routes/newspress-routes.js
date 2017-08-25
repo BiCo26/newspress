@@ -11,6 +11,8 @@ newspressRoutes.post('/userSources', newspressController.show);
 newspressRoutes.post('/saveArticle', newspressController.saveArticle);
 newspressRoutes.post('/userSavedArticles', newspressController.getUserSavedArticles);
 
+newspressRoutes.post('/topic', newspressController.createTopic);
+newspressRoutes.get('/topic/:id', newspressController.showTopic);
 // newspressroutes.get('/:id', newspressController.show);
 // newspressroutes.put('/:id', newspressController.update);
 // newspressroutes.delete('/:id', newspressController.destroy);

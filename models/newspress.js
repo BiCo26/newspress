@@ -66,6 +66,31 @@ Newspress.userArticles = id => {
 };
 
 
+Newspress.topic = topic => {
+  return db.one(`
+  INSERT INTO posts
+  (username, topic, article_id)
+  VALUES ($1, $2, $3)
+  RETURNING *
+  `,
+  [topic.username, topic.topic, topic.article_id]
+);
+};
+
+Newspress.findArticleTopics = id => {
+  return db.query(
+    `
+    SELECT * FROM posts
+    WHERE article_id = $1 
+    ORDER by id DESC
+    `,
+    [id]
+  );
+};
+
+
+
+
 //We have access to all of the user's information on req.user, so 
 //we can use that in our Movie.create model method. In models/movie.js:
 //NOT FINISHED >
