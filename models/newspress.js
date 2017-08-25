@@ -66,6 +66,31 @@ Newspress.userArticles = id => {
 };
 
 
+Newspress.topic = topic => {
+  return db.one(`
+  INSERT INTO posts
+  (username, topic, article_title)
+  VALUES ($1, $2, $3)
+  RETURNING *
+  `,
+  [topic.username, topic.topic, topic.article_title]
+);
+};
+
+Newspress.findArticleTopics = title => {
+  return db.query(
+    `
+    SELECT * FROM posts
+    WHERE article_title = $1 
+    ORDER by id DESC
+    `,
+    [title]
+  );
+};
+
+
+
+
 //We have access to all of the user's information on req.user, so 
 //we can use that in our Movie.create model method. In models/movie.js:
 //NOT FINISHED >
@@ -97,10 +122,10 @@ Newspress.update = (newspress, id) => {
 Newspress.destroy = id => {
   return db.none(
     `
-    DELETE FROM newspress
+    DELETE FROM sources
     WHERE id = $1
   `,
-    [id]
+    [id.source_id]
   );
 };
 

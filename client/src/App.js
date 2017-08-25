@@ -13,6 +13,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Header from './components/Header';
 import UserSavedArticles from './components/UserSavedArticles';
+import Forum from './components/Forum'
+
 
 class App extends Component {
    constructor() {
@@ -130,6 +132,7 @@ class App extends Component {
       this.setState({  
         auth: res.data.auth,
         user: res.data.user.id,
+        userName:res.data.user.username,
         currentPage: 'selectSources',
       });
     }).catch(err => console.log(err));
@@ -181,6 +184,7 @@ class App extends Component {
       <div className="App">
         <Header setPage={this.setPage} logOut={this.logOut}/>
         {this.decideWhichPage()}
+        {/* {this.decideWhichPage()} */}
       </div>
     );
   }

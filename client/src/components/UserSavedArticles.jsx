@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Forum from './Forum'
 
 class UserSavedArticles extends Component {
 
@@ -58,7 +59,8 @@ renderSavedArticles(){
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <img src={article.image_url}/>
-            
+            <Forum username={this.props.userName} article_title={article.title}/>
+
           </div>
         );
       });
