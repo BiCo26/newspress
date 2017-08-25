@@ -19,12 +19,12 @@ CREATE TABLE IF NOT EXISTS sources (
 
 CREATE TABLE IF NOT EXISTS articles (
   id SERIAL PRIMARY KEY,
-  author VARCHAR(255) NOT NULL,
-  description VARCHAR(255) NOT NULL,
-  publishedAt VARCHAR(255) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  url VARCHAR(255) NOT NULL,
-  image_url VARCHAR(255) NOT NULL,
+  author VARCHAR(255),
+  description VARCHAR(255),
+  publishedAt VARCHAR(255),
+  title VARCHAR(255) ,
+  url VARCHAR(255) ,
+  image_url VARCHAR(255) ,
   user_id INT REFERENCES users(id) 
 );
 
