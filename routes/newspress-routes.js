@@ -36,4 +36,3 @@ newspressRoutes.get('/topic/:title', newspressController.showTopic);
 
 
 module.exports = newspressRoutes;
-

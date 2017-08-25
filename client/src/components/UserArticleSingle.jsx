@@ -12,7 +12,7 @@ class UserArticleSingle extends Component {
       apiDataLoaded: false,
       fireRedirect: false,
     }
-    //this.deleteIceCream = this.deleteIceCream.bind(this);
+
   }
 
 renderArticleOrLoading() {
