@@ -9,7 +9,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -35,7 +35,7 @@ time, mark, audio, video {
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  padding: 20;
   color: white;
 }
 
@@ -71,15 +71,14 @@ nav ul{
   display: flex;
   flex-direction: row;
   justify-content: center;
+ 
 }
 
 nav li {
   margin: 30px auto;
   font-size:2vw;
 }
-nav {
-  background-color: 
-}
+
 
 header {
   height: 24vh;
@@ -97,9 +96,12 @@ body {
 .logo {
   font-size: 3vw;
   font-family: 'Limelight', helvetica;
-  font-size: 60px;
+  font-size: 65px;
   text-shadow: black 5px 5px;
   
+  border-bottom: 5px solid black;
+  display: inline-block;
+  line-height: 0.85;
 }
 
 button {
@@ -113,6 +115,10 @@ button {
   box-shadow: black 2px 2px;
   font-family: 'Nova Slim', helvetica;
 }
+.SOURCE{
+  color: white;
+  text-shadow: #B60505 2px 2px;
+}
 button:hover{
   font-size: 16px;
   color: white;
@@ -121,18 +127,35 @@ button:hover{
   box-shadow: black 2px 2px;
   font-family: 'Nova Slim', helvetica;
 }
+.article-single {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  margin: 10px;
+  
+}
 .article {
   align-content: center;
-  height: 40%;
-  width: 60%;
+  height: 460px;
+  width: 19.5%;
+  border: solid black;
+  overflow: scroll;
 }
+.articleImg {
+  height: 50%;
+  width: 95%;
+}
+
 .singleArticle_title {
   text-decoration: underline;
+  position: relative;
 }
 p {
   font-weight: 0px;
   font-family: 'Nova Slim', helvetica;
   text-align: center;
+  position: relative;
 }
 
 
@@ -159,9 +182,11 @@ p {
   border-style: dotted dashed solid double;
 }
 .defaultTag{
-  font-size: 10px;
-  background: black; 
-  color: white;
+  font-size: 40px;
+  background-color: black; 
+  color: #B60505;
+  margin: 3px;
+
 }
 .submenu {
 

@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      By : Team Chill
+      NEWS TEAM ASSEMBLE !!! 
     </footer>
   )
 }
