@@ -41,6 +41,7 @@ Newspress.create = newspress => {
 };
 
 Newspress.insertArticle = newspress => {
+  console.log ("we are in the modal posting to "+ newspress.user_id +" **");
   return db.one(
     `
     INSERT INTO articles
@@ -51,6 +52,19 @@ Newspress.insertArticle = newspress => {
     [ newspress.author,newspress.description,newspress.publishedAt,newspress.title,newspress.url,newspress.image_url, newspress.user_id]//these are place holders
   );
 };
+
+
+Newspress.userArticles = id => {
+  console.log ("we are in the modals getting articles "+ id.Id);
+  return db.many(
+      `
+      SELECT * FROM articles
+      WHERE user_id = $1
+    `,
+      [id.Id]
+    );
+};
+
 
 //We have access to all of the user's information on req.user, so 
 //we can use that in our Movie.create model method. In models/movie.js:

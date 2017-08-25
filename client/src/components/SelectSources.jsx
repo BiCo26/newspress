@@ -10,7 +10,7 @@ class SourceChoices extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			sourceInputArray: [],
+			//sourceInputArray: [],
 			source: null,
 			dataLoaded: false,
 		}
@@ -20,13 +20,13 @@ class SourceChoices extends Component {
 
 
  
-		handleClick(source_object) {
+	  handleClick(source_object) {
 
-      console.log(source_object,'ioefjsoejfoi',this.props.userInfo.id);
+      console.log(source_object,'ioefjsoejfoi',this.props.userID);
 
 	  axios.post('/news', {
         source: source_object,
-        user_id: this.props.userInfo.id
+        user_id: this.props.userID
 
       })
       .then(res => {
@@ -34,15 +34,16 @@ class SourceChoices extends Component {
         console.log(res);
       })
       .catch(err => console.log(err));
+       
 
-		let updatedSources = this.state.sourceInputArray;
-		updatedSources.push(source_object
-			);
-		console.log(this.state.sourceInputArray[0].code);
+		// let updatedSources = this.state.sourceInputArray;
+		// updatedSources.push(source_object
+		// 	);
+		// console.log(this.state.sourceInputArray[0].code);
 
-		this.setState({
-			sourceInputArray: updatedSources,
-		})
+		// this.setState({
+		// 	sourceInputArray: updatedSources,
+		// })
 
 	}
 
@@ -51,7 +52,7 @@ class SourceChoices extends Component {
         
         event.preventDefault();
         
-        axios.post('/news/userSources',{user_id:this.props.userInfo.id})
+        axios.post('/news/userSources',{user_id:this.props.userID})
         .then(response => {
           console.log(response);
            this.props.retrieveUserSources(response.data);
@@ -71,7 +72,7 @@ class SourceChoices extends Component {
                             <input  className="search" type="text"  name="sourceVal" placeholder='Enter a source here' onChange={this.handleChange}/>
                             <input className=" addSource" type="submit"  value="add" />
                         </form>
-                        <ul>
+                        <ul className="selectSourcesList">
                         <p>{this.props.test}</p>
                         {sources.map(source=>{
                         return (
