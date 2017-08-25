@@ -84,14 +84,13 @@ header {
   padding: 1%;
   background-color: #C40707;
   color: white;
-  font-family: Impact, Charcoal, sans-serif;
-  
+  font-family: Impact, Charcoal, sans-serif; 
 }
 
 .logo {
   font-size: 3vw;
 }
-ul{
+.register_image_ul{
   display: flex;
   /*flex-wrap: wrap;*/
   width: 100vw;
@@ -103,12 +102,12 @@ ul{
   width: 100vw;
 }
 
-li{
+.register_image_li{
+  
   width: 29%;
   list-style: none;
   padding: 2%;
 }
-
 
 .source_icon{
   height: 80px;
@@ -117,7 +116,7 @@ li{
 .source_icon_container{
   border-style: dotted dashed solid double;
 }
-.defualtTag{
+.defaultTag{
   font-size: 50px;
   background: yellow; 
 }
