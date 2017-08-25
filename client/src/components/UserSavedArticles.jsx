@@ -32,7 +32,9 @@ componentWillMount(){
 
 deleteSavedArticle(articleID) {
       console.log("the articke ID is========= " +articleID);
-    /*axios.delete(`/news/${this.props.match.params.id}`) 
+    axios.post(`/news/deleteArticle`,{
+      article_id:articleID
+    }) 
       .then(res => {
         console.log(res);
         this.setState({
@@ -40,7 +42,7 @@ deleteSavedArticle(articleID) {
         });
       }).catch(err => {
         console.log(err);
-      });*/
+      });
   }
 
 

@@ -167,6 +167,20 @@ newspressController.destroySource = (req, res) => {
     });
 };
 
+newspressController.destroyArticle = (req, res) => {
+  console.log(req.body.article_id);
+  Newspress.deleteArticle({article_id:req.body.article_id})
+    .then(newspress => {
+      res.json({
+        message: 'ok',
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
 
 
 module.exports = newspressController;

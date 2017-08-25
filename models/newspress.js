@@ -129,6 +129,16 @@ Newspress.destroy = id => {
   );
 };
 
+Newspress.deleteArticle = id => {
+  return db.none(
+    `
+    DELETE FROM articles
+    WHERE id = $1
+  `,
+    [id.article_id]
+  );
+};
+
 
 
 module.exports = Newspress;
