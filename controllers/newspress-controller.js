@@ -64,6 +64,20 @@ newspressController.saveArticle = (req, res) => {
       url: req.body.source.url,
       image_url: req.body.source.urlToImage,
       user_id: req.body.user_id,
+    },
+  )
+    .then(newspress => {
+      res.json({
+        message: 'ok',
+        data: newspress,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
 newspressController.createTopic = (req, res) => {
   console.log('going through the newsController')
   Newspress.topic({
@@ -100,8 +114,6 @@ newspressController.showTopic = (req, res) => {
       res.status(500).json({ err });
     });
 };
-
-
 
 newspressController.update = (req, res) => {
   Newspress.update(
