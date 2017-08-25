@@ -92,7 +92,7 @@ newspressController.showTopic = (req, res) => {
       console.log(topics)
       res.json({
         message: 'ok',
-        data: topics.topic,
+        data: topics,
       });
     })
     .catch(err => {

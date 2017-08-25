@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import Topic from './Topic'
 
 class Forum extends Component{
     constructor(){
@@ -25,7 +26,6 @@ class Forum extends Component{
        this.setState({
            posts:res.data.data
        })
-        
      }).catch(err => console.log(err));
     }
 
@@ -53,22 +53,20 @@ class Forum extends Component{
         console.log('this is render')
         console.log(this.state.posts)
         return this.state.posts.map(post => {
-            return (<div>
-            <h1>{post.topic}</h1>
-            </div>)   
+            return ( <Topic key={post.id} username={post.username} topic={post.topic} />)
         })
     }
 
     render(){
-    return( <div> 
-             <div classNmae='forum'>
+    return( <div classNmae='forum'> 
+             <div classNmae='postnewtopic'>
             <form onSubmit={(e) => this.handleTopicSubmit(this.props.username, this.props.article_id)}>
                 <textarea value={this.state.topic} onChange={this.contentUpdate}/>
-                <input type='submit' value='Comment'/>
+                <input type='submit' value='Post'/>
             </form>
-             </div>
+            </div>
             {this.renderCurrentTopics()}
-        </div>
+          </div>
         )
     }
 }
