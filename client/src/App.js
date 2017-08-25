@@ -13,13 +13,16 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Header from './components/Header';
 import UserSavedArticles from './components/UserSavedArticles';
+import Forum from './components/Forum'
+
 
 class App extends Component {
    constructor() {
     super();
     this.state = {
       auth: false,
-      user: null,
+      user: null, //user id
+      userName: null, //user name
       currentPage: 'home',
       userSourcesApp:null,
       userSourcesAppLoaded:false
@@ -28,7 +31,6 @@ class App extends Component {
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
     this.handleRegisterSubmit = this.handleRegisterSubmit.bind(this);
     this.logOut = this.logOut.bind(this);
-
     this.retrieveUserSources=this.retrieveUserSources.bind(this);
    }
 
@@ -47,7 +49,9 @@ class App extends Component {
       if (this.state.auth){
           console.log ("testing auth ++"+ this.state.auth)
           console.log ("testing id ++"+ this.state.user)
+          console.log ("testing username ++"+ this.state.userName)
           console.log ("testing sources ++"+ this.state.userSourcesApp)
+          
           //return <p className="defualtTag">you are logged in</p>
           return <Home auth={this.state.auth} userSources={this.state.userSourcesApp}
           userID={this.state.user} />;
@@ -61,8 +65,7 @@ class App extends Component {
         return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
         break;
       case 'user':
-        return <UserSavedArticles auth={this.state.auth} userID={this.state.user}/>;
-        // return <h1>testing user 1000</h1>;
+        return <UserSavedArticles auth={this.state.auth}  userName={this.state.userName} userID={this.state.user}/>;
         break;
       case 'selectSources': 
         return  <SelectSources  auth={this.state.auth} userID={this.state.user} 
@@ -79,13 +82,14 @@ class App extends Component {
     axios.post('/auth/login', {
       username,
       password,
-    }).then(res => {
+    }).then(res => { 
       console.log ("55"+ res.data.user.id); 
       console.log ("55"+ res.data.user.username); 
       console.log ("55"+res.data.auth);
 
        this.setState({
-          user: res.data.user.id
+          user: res.data.user.id,
+          userName:res.data.user.username
           
        });
 
@@ -128,6 +132,7 @@ class App extends Component {
       this.setState({  
         auth: res.data.auth,
         user: res.data.user.id,
+        userName:res.data.user.username,
         currentPage: 'selectSources',
       });
     }).catch(err => console.log(err));
@@ -179,9 +184,7 @@ class App extends Component {
       <div className="App">
         <Header setPage={this.setPage} logOut={this.logOut}/>
         {this.decideWhichPage()}
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/* {this.decideWhichPage()} */}
       </div>
     );
   }

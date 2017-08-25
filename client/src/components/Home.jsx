@@ -5,7 +5,7 @@ import SourcesInput from './SourcesInput';
 import SelectSources from './SelectSources';
 import GetNews from './GetNews';
 import userTestSources_Json from "../data/testUserSources";
-
+import axios from 'axios';
 
 class Home extends Component {
     constructor(props) {
@@ -15,10 +15,12 @@ class Home extends Component {
         userInfo:null, 
         auth:false,
         sourcesLoaded:false,
-        sourcesData:null,        
+        sourcesData:null,
+        fireRedirect:false        
     }
-    
+        //this.handleClick = this.handleClick.bind(this);
         this.returnSources=this.returnSources.bind(this);
+        this.deleteSavedSource = this.deleteSavedSource.bind(this);
     }
 
     componentDidMount(){
@@ -33,6 +35,28 @@ class Home extends Component {
        console.log ("test props "+ this.props.userSources);
        
     }
+
+    handleClick(){//delete source on click
+      console.log("delete source");
+    }
+
+    //deleting source V
+    deleteSavedSource(source_id) {
+      
+      console.log(source_id)
+    axios.post(`/news/deleteSource`,{
+      source_id:source_id
+    }) 
+      .then(res => {
+        console.log(res);
+        this.setState({
+          fireRedirect: true,
+        });
+      }).catch(err => {
+        console.log(err);
+      });
+  }
+  //deleting source ^
 
     returnSources(sources_input){
         console.log("bleh")
@@ -72,7 +96,11 @@ class Home extends Component {
           return this.state.sourcesData.map(source => {
         return (
           <div> 
-            <h1 className="userHome_source"> Viewing News From {source.source_code}</h1>
+            
+            <div className="userHome_source"> Viewing New From {source.source_code}
+            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
+           
+            </div>
             <GetNews source={source.source_code} userID={this.props.userID }/>
           </div>
         );
