@@ -11,7 +11,8 @@ import DefaultHome from './components/DefaultHome';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Header from './components/Header'
+import Header from './components/Header';
+import UserSavedArticles from './components/UserSavedArticles';
 
 class App extends Component {
    constructor() {
@@ -58,10 +59,13 @@ class App extends Component {
         break;
       case 'register':
         return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
-      default:
+        break;
+      case 'user':
+        return <UserSavedArticles auth={this.state.auth} userID={this.state.user}/>;
+        // return <h1>testing user 1000</h1>;
         break;
       case 'selectSources': 
-        return  <SelectSources  auth={this.state.auth} userInfo={this.state.user} 
+        return  <SelectSources  auth={this.state.auth} userID={this.state.user} 
         retrieveUserSources={this.retrieveUserSources}/>
 
     }
@@ -119,10 +123,11 @@ class App extends Component {
       username,
       password,
     }).then(res => {
-    
+      console.log ("id after registering is -" + res.data.user.id);
+      console.log ("auth after registering is -" + res.data.auth); 
       this.setState({  
         auth: res.data.auth,
-        user: res.data.user,
+        user: res.data.user.id,
         currentPage: 'selectSources',
       });
     }).catch(err => console.log(err));
@@ -164,6 +169,8 @@ class App extends Component {
         console.log("%%%%%%%%%%%%%%%" +this.state.userSourcesApp);
 
     }
+
+
 
 
 

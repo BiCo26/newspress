@@ -93,9 +93,16 @@ header {
 }
 ul{
   display: flex;
+  /*flex-wrap: wrap;*/
+  width: 100vw;
+}
+
+.selectSourcesList{
+  display: flex;
   flex-wrap: wrap;
   width: 100vw;
 }
+
 li{
   width: 29%;
   list-style: none;
@@ -118,4 +125,13 @@ li{
 .userHome_source{
   font-size: 50px;
   background: blue;  
+}
+.userArticle{
+  font-size: 50px;
+  background: orange;  
+}
+
+.message{
+  font-size: 50px;
+  background: lightgreen;
 }

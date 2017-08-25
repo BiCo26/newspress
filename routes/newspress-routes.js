@@ -9,6 +9,7 @@ const newspressController = require('../controllers/newspress-controller');
 newspressRoutes.post('/', newspressController.create);//B
 newspressRoutes.post('/userSources', newspressController.show);
 newspressRoutes.post('/saveArticle', newspressController.saveArticle);
+newspressRoutes.post('/userSavedArticles', newspressController.getUserSavedArticles);
 
 // newspressroutes.get('/:id', newspressController.show);
 // newspressroutes.put('/:id', newspressController.update);

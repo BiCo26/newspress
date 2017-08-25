@@ -63,7 +63,7 @@ newspressController.saveArticle = (req, res) => {
       title: req.body.source.title,
       url: req.body.source.url,
       image_url: req.body.source.urlToImage,
-      user_id: req.body.user_id.id,
+      user_id: req.body.user_id,
     },
   )
     .then(newspress => {
@@ -77,6 +77,23 @@ newspressController.saveArticle = (req, res) => {
       res.status(500).json({ err });
     });
 };
+
+
+newspressController.getUserSavedArticles = (req, res) => {
+  console.log ("we are in controller getting user articles for "+ req.body.Id);
+  Newspress.userArticles({Id: req.body.Id})
+    .then( articles => {
+        res.json({
+        user: req.user,
+        data: articles,
+        
+      });
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json({err: err});
+    });
+}
+
 
 newspressController.destroy = (req, res) => {
   Newspress.destroy(req.params.id)
