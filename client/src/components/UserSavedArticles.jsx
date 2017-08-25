@@ -35,8 +35,10 @@ componentWillMount(){
 }
 
 deleteSavedArticle(articleID) {
-     // console.log("the article ID is========= " +articleID);
-    /*axios.delete(`/news/${this.props.match.params.id}`) 
+      console.log("the articke ID is========= " +articleID);
+    axios.post(`/news/deleteArticle`,{
+      article_id:articleID
+    }) 
       .then(res => {
         console.log(res);
         this.setState({
@@ -83,7 +85,7 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
-                 {/*<button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>*/}
+                 <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Article</button>
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
             </div>   
