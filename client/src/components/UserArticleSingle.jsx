@@ -12,13 +12,16 @@ class UserArticleSingle extends Component {
       apiDataLoaded: false,
       fireRedirect: false,
     }
-    //this.deleteIceCream = this.deleteIceCream.bind(this);
+
   }
 
 renderArticleOrLoading() {
      return (
         <div className="inner">
             Single Article Component Loaded
+              <h1>{this.props.article.title}</h1>
+              <p>{this.props.article.description}</p>
+              <img src={this.props.article.image_url}/>
             </div>
             )
 }

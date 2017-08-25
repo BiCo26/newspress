@@ -78,6 +78,65 @@ newspressController.saveArticle = (req, res) => {
     });
 };
 
+newspressController.createTopic = (req, res) => {
+  console.log('going through the newsController')
+  Newspress.topic({
+    username:req.body.username,
+    topic:req.body.topic,
+    article_title:req.body.article_title
+  })
+  .then(topics =>{
+    res.json({
+      message:'ok',
+      data: topics,
+    });
+  })
+  .catch(err =>{
+    console.log(err);
+    res.status(500).json({ err });
+  });
+};
+
+newspressController.showTopic = (req, res) => {
+  console.log('we are at getting controller')
+  console.log(req.body.article_id)
+  console.log(req.params.id)
+  Newspress.findArticleTopics(req.params.title)
+    .then(topics=> {
+      console.log(topics)
+      res.json({
+        message: 'ok',
+        data: topics,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
+newspressController.update = (req, res) => {
+  Newspress.update(
+    {
+      flavor: req.body.flavor,
+      description: req.body.description,
+      rating: req.body.rating,
+      url: req.body.url,
+      brand: req.body.brand,
+    },
+  )
+    .then(newspress => {
+      res.json({
+        message: 'ok',
+        data: newspress,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
 
 newspressController.getUserSavedArticles = (req, res) => {
   console.log ("we are in controller getting user articles for "+ req.body.Id);
@@ -95,12 +154,25 @@ newspressController.getUserSavedArticles = (req, res) => {
 }
 
 
-newspressController.destroy = (req, res) => {
-  Newspress.destroy(req.params.id)
+newspressController.destroySource = (req, res) => {
+  Newspress.destroy({source_id:req.body.source_id})
     .then(newspress => {
       res.json({
         message: 'ok',
-        data: newspress,
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+};
+
+newspressController.destroyArticle = (req, res) => {
+  console.log(req.body.article_id);
+  Newspress.deleteArticle({article_id:req.body.article_id})
+    .then(newspress => {
+      res.json({
+        message: 'ok',
       });
     })
     .catch(err => {
