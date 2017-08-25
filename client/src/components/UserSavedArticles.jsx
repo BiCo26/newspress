@@ -77,7 +77,9 @@ renderSavedArticles(){
     else if (this.state.dataLoaded && this.props.auth) {
       if (this.state.singleArticle){
          //this.resetState(); 
+
           return <UserArticleSingle userID={this.props.userID} username={this.props.userName} article={this.state.currentArticle}/>
+
     
       } else { 
       return this.state.savedArticlesArray.map(article => {
@@ -85,7 +87,9 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
+
                  <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>
+
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
             </div>   

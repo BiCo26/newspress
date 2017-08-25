@@ -12,21 +12,16 @@ constructor(props){
 		this.state = {
 			source: null,
 			dataLoaded: false,
-      sth:false
 		}
 	  this.handleClick = this.handleClick.bind(this);
- 
 	//	this.handleSubmit = this.handleSubmit.bind(this);
 }
 
-   
-  handleClick(article_object, saveArticle) {
+  handleClick(article_object) {
     console.log("button clicked, saving article"); 
     console.log ("ID "+this.props.userID); 
     console.log(article_object,'ioefjsoejfoi',this.props.userID);
-    this.setState({
-          sth:true
-        })
+    
 	  axios.post('news/saveArticle', {
         source: article_object,
         user_id: this.props.userID

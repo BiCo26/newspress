@@ -41,8 +41,12 @@ class Home extends Component {
     }
 
     //deleting source V
-    deleteSavedSource() {
-    axios.delete(`/news/${this.props.match.params.id}`) 
+    deleteSavedSource(source_id) {
+      
+      console.log(source_id)
+    axios.post(`/news/deleteSource`,{
+      source_id:source_id
+    }) 
       .then(res => {
         console.log(res);
         this.setState({
@@ -92,8 +96,9 @@ class Home extends Component {
           return this.state.sourcesData.map(source => {
         return (
           <div> 
+            
             <div className="userHome_source"> Viewing New From {source.source_code}
-            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource()}}>Delete Source</button>
+            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
            
             </div>
             <GetNews source={source.source_code} userID={this.props.userID }/>
