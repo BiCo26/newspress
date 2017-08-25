@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Audiowide|UnifrakturMaguntia|Vast+Shadow');
+@import url("https://fonts.googleapis.com/css?family=Limelight|Nova+Slim");
 
 
 html, body, div, span, applet, object, iframe,
@@ -20,8 +20,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  list-style: none; 
 }
-
 
 .App {
   text-align: center;
@@ -77,29 +77,70 @@ nav li {
   margin: 30px auto;
   font-size:2vw;
 }
+nav {
+  background-color: 
+}
 
 header {
   height: 24vh;
   width: 100vw;
   padding: 1%;
-  background-color: #C40707;
+  background-color: #B60505;
   color: white;
-  font-family: Impact, Charcoal, sans-serif; 
+  font-family: 'Limelight', helvetica; 
+ 
+}
+body {
+  font-family: 'Limelight', helvetica; 
 }
 
 .logo {
   font-size: 3vw;
+  font-family: 'Limelight', helvetica;
+  font-size: 60px;
+  text-shadow: black 5px 5px;
+  
 }
-.register_image_ul{
-  display: flex;
-  /*flex-wrap: wrap;*/
-  width: 100vw;
+
+button {
+  background-color: #B60505;
+  margin: 3px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  border-radius: 120px;
+  border: solid black 3px;
+  box-shadow: black 2px 2px;
+  font-family: 'Nova Slim', helvetica;
 }
+button:hover{
+  font-size: 16px;
+  color: white;
+  border-radius: 120px;
+  border: solid black 3px;
+  box-shadow: black 2px 2px;
+  font-family: 'Nova Slim', helvetica;
+}
+.article {
+  align-content: center;
+  height: 40%;
+  width: 60%;
+}
+.singleArticle_title {
+  text-decoration: underline;
+}
+p {
+  font-weight: 0px;
+  font-family: 'Nova Slim', helvetica;
+  text-align: center;
+}
+
 
 .selectSourcesList{
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+
 }
 
 .register_image_li{
@@ -107,6 +148,7 @@ header {
   width: 29%;
   list-style: none;
   padding: 2%;
+  
 }
 
 .source_icon{
@@ -117,8 +159,12 @@ header {
   border-style: dotted dashed solid double;
 }
 .defaultTag{
-  font-size: 50px;
-  background: yellow; 
+  font-size: 10px;
+  background: black; 
+  color: white;
+}
+.submenu {
+
 }
 
 .userHome_source{
