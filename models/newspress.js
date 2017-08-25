@@ -122,10 +122,10 @@ Newspress.update = (newspress, id) => {
 Newspress.destroy = id => {
   return db.none(
     `
-    DELETE FROM newspress
+    DELETE FROM sources
     WHERE id = $1
   `,
-    [id]
+    [id.source_id]
   );
 };
 
