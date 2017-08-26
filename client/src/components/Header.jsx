@@ -7,6 +7,7 @@ const Header = (props) => {
       <nav>
         <ul>
           <li onClick={() => props.setPage('home')}>Home</li>
+           <li onClick={() => props.setPage('selectSources')}>Sources</li>
           <li onClick={() => props.setPage('user')}>My News</li>
           <li onClick={() => props.setPage('login')}>Log In</li>
             <ul className = 'submenu'>
