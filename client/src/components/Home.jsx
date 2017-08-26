@@ -20,15 +20,30 @@ class Home extends Component {
         this.deleteSavedSource = this.deleteSavedSource.bind(this);
     }
 
+
+   
+
+
     componentDidMount(){
-        this.setState({
+  //
+       axios.post('/news/userSources',{user_id:this.props.userID})
+        .then(response => {
+          console.log(response);
+            this.setState({
             recievedUserInfo:true, 
             auth:this.props.auth,
             sourcesLoaded:true,
-            sourcesData: this.props.userSources//userTestSources_Json
+            sourcesData: response.data.data,
+            
         })
-        console.log ("test props "+ this.props.userSources);
+          
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+		
     }
+
     //deleting source V
 
     deleteSavedSource(source_id) {

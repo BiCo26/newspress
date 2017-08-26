@@ -15,13 +15,12 @@ class UserSavedArticles extends Component {
     }
      this.deleteSavedArticle = this.deleteSavedArticle.bind(this);
      this.renderSingleArticle= this.renderSingleArticle.bind(this);
-   
+    //  this.resetState=this.resetState.bind(this);
 }
 
 
-componentDidMount(){
-
-    console.log("props user ID yes yes "+ this.props.userID);
+componentWillMount(){
+    console.log("props user ID "+ this.props.userID);
     axios.post('/news/userSavedArticles', {Id:this.props.userID} )
         .then(res => {
             console.log(res.data)
@@ -35,15 +34,9 @@ componentDidMount(){
     });
 }
 
-
 deleteSavedArticle(articleID) {
-<<<<<<< HEAD
 
       console.log("the articke ID is========= " +articleID);
-=======
-    
-    console.log("the articke ID is========= " +articleID);
->>>>>>> 372a69f418093272d8048b01d71c1d11f8f84ba5
     axios.post(`/news/deleteArticle`,{
       article_id:articleID
     }) 
@@ -55,9 +48,9 @@ deleteSavedArticle(articleID) {
       }).catch(err => {
         console.log(err);
       });
-    
 
-    //deleting the article locally using a filter-opptimistic approach
+
+      //deleting the article locally using a filter-opptimistic approach
     let upadatedSavedArticlesArray = [];
     this.state.savedArticlesArray.forEach(function(article){
         if (article.id!== articleID){
@@ -69,9 +62,8 @@ deleteSavedArticle(articleID) {
             savedArticlesArray: upadatedSavedArticlesArray
     });
 
-}
 
-
+  }
 
 renderSingleArticle(article_object){
     console.log ("bob");
@@ -84,12 +76,20 @@ renderSingleArticle(article_object){
     console.log ("after "+this.state.singleArticle);
     
 }
+/*resetState(){
+    
+     this.setState({
+                      singleArticle: false,
+                });
+ 
+     console.log("state set to again========= " +this.state.singleArticle);
+    
+}*/
 
 
 renderSavedArticles(){
-   
     if (!this.props.auth)  return <p className="message">Please Login</p>;
-    else if ( this.state.dataLoaded && this.state.savedArticlesArray.length==0) return <p className="message">No Articles Saved</p>;
+    else if (!this.state.dataLoaded) return <p className="message">No Articles Saved</p>;
     else if (this.state.dataLoaded && this.props.auth) {
       if (this.state.singleArticle){
          //this.resetState(); 
@@ -103,9 +103,7 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
-
-                 <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>
-
+                 <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Article</button>
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
             </div>   
