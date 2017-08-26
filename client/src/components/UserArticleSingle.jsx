@@ -22,7 +22,7 @@ renderArticleOrLoading() {
               <h1>{this.props.article.title}</h1>
               <p>{this.props.article.description}</p>
               <img src={this.props.article.image_url}/>
-                <Forum username={this.props.userName} article_title={this.props.article_title}/>
+              <Forum username={this.props.userName} article_title={this.props.article_title}/>
             </div>
             )
 }

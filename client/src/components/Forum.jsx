@@ -64,14 +64,16 @@ class Forum extends Component{
     }
 
     render(){
-    return( <div classNmae='forum'> 
+    return( <div classNmae='forumall'> 
              <div classNmae='postnewtopic'>
             <form onSubmit={(e) => this.userNameCheck(this.props.username, this.props.article_title)}>
-                <textarea value={this.state.topic} onChange={this.contentUpdate}/>
+                <textarea value={this.state.topic} onChange={this.contentUpdate} placeholder='Leave comment here!'/>
                 <input type='submit' value='Post'/>
             </form>
             </div>
+            <div className='currenttopics'>
             {this.renderCurrentTopics()}
+            </div>
           </div>
         )
     }

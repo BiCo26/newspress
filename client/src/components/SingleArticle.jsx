@@ -44,7 +44,6 @@ constructor(props){
             <h2 className = 'singleArticle_title'>{this.props.articleData.title}</h2>
             <img className = 'articleImg' src={this.props.articleData.urlToImage} />
             <p>{this.props.articleData.description}</p>
-             <Forum username={this.props.userName} article_title={this.props.articleData.title}/>
           </div>
         )
       }
