@@ -36,7 +36,6 @@ componentWillMount(){
 
 deleteSavedArticle(articleID) {
 
-      console.log("the articke ID is========= " +articleID);
     axios.post(`/news/deleteArticle`,{
       article_id:articleID
     }) 
@@ -103,12 +102,11 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
-
                  <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Article</button>
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
             </div>   
-                <h1>{article.title}</h1>
+                <h1>{article.title }</h1>
                 <p>{article.description}</p>
                 <img src={article.image_url}/>
                 <Forum username={this.props.userName} article_title={article.title}/>
