@@ -103,6 +103,7 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
+
                  <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Article</button>
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
