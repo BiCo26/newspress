@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-
+import Forum from './Forum'
 
 
 class UserArticleSingle extends Component {
@@ -22,6 +22,7 @@ renderArticleOrLoading() {
               <h1>{this.props.article.title}</h1>
               <p>{this.props.article.description}</p>
               <img src={this.props.article.image_url}/>
+                <Forum username={this.props.userName} article_title={this.props.article_title}/>
             </div>
             )
 }

@@ -78,7 +78,7 @@ renderSavedArticles(){
       if (this.state.singleArticle){
          //this.resetState(); 
 
-          return <UserArticleSingle userID={this.props.userID} username={this.props.userName} article={this.state.currentArticle}/>
+          return <UserArticleSingle userID={this.props.userID} username={this.props.userName} article={this.state.currentArticle} article_title={this.state.currentArticle.title}/>
 
     
       } else { 

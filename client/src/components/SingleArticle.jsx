@@ -3,10 +3,10 @@ import React, {
 } from 'react';
 
 import axios from 'axios';
+import Forum from './Forum';
 
 
-
-class Article extends Component {
+class SingleArticle extends Component {
 constructor(props){
 		super(props);
 		this.state = {
@@ -44,8 +44,9 @@ constructor(props){
             <h2 className = 'singleArticle_title'>{this.props.articleData.title}</h2>
             <img className = 'articleImg' src={this.props.articleData.urlToImage} />
             <p>{this.props.articleData.description}</p>
+             <Forum username={this.props.userName} article_title={this.props.articleData.title}/>
           </div>
         )
       }
 }
-export default Article;
+export default SingleArticle;
