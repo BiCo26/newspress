@@ -40,9 +40,14 @@ class Home extends Component {
       console.log("delete source");
     }
 
-    //deleting source V
-    deleteSavedSource() {
-    axios.delete(`/news/${this.props.match.params.id}`) 
+  
+   //deleting source V
+    deleteSavedSource(source_id) {
+      
+      console.log(source_id)
+    axios.post(`/news/deleteSource`,{
+      source_id:source_id
+    }) 
       .then(res => {
         console.log(res);
         this.setState({
@@ -51,6 +56,19 @@ class Home extends Component {
       }).catch(err => {
         console.log(err);
       });
+
+
+    //deleting the article locally using a filter-opptimistic approach
+    let upadatedSourcesData = [];
+    this.state.sourcesData.forEach(function(source){
+        if (source.id!== source_id){
+            upadatedSourcesData.push(source);
+        }
+    });
+    //setting the filtered array to state
+    this.setState({
+            sourcesData: upadatedSourcesData
+    });
   }
   //deleting source ^
 
@@ -93,7 +111,7 @@ class Home extends Component {
         return (
           <div> 
             <div className="userHome_source"> Viewing New From {source.source_code}
-            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource()}}>Delete Source</button>
+            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
            
             </div>
             <GetNews source={source.source_code} userID={this.props.userID }/>
