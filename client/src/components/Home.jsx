@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import SourcesInput from './SourcesInput';
 import SelectSources from './SelectSources';
 import GetNews from './GetNews';
@@ -11,33 +9,39 @@ class Home extends Component {
     constructor(props) {
     super(props);
         this.state = {
-        recievedUserInfo:false, 
-        userInfo:null, 
-        auth:false,
-        sourcesLoaded:false,
-        sourcesData:null,
-        fireRedirect:false        
-    }
-        //this.handleClick = this.handleClick.bind(this);
+          recievedUserInfo:false, 
+          userInfo:null, 
+          auth:false,
+          sourcesLoaded:false,
+          sourcesData:null,
+          fireRedirect:false        
+        }
         this.returnSources=this.returnSources.bind(this);
         this.deleteSavedSource = this.deleteSavedSource.bind(this);
     }
 
+
+   
+
+
     componentDidMount(){
-       this.setState({
-         recievedUserInfo:true, 
-         auth:this.props.auth,
-         sourcesLoaded:true,
-         sourcesData: this.props.userSources//userTestSources_Json
-       })
-
-       //console.log ( "user sources array: "+this.state.sourcesData);
-       console.log ("test props "+ this.props.userSources);
-       
-    }
-
-    handleClick(){//delete source on click
-      console.log("delete source");
+  //
+       axios.post('/news/userSources',{user_id:this.props.userID})
+        .then(response => {
+          console.log(response);
+            this.setState({
+            recievedUserInfo:true, 
+            auth:this.props.auth,
+            sourcesLoaded:true,
+            sourcesData: response.data.data,
+            
+        })
+          
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+		
     }
 
     //deleting source V
@@ -84,54 +88,49 @@ class Home extends Component {
         console.log (this.state.sourceData + "yellow");
     }
 
+    //deleting source ^
     renderSelectSources(){
         if (!this.state.dataLoaded){
             return (
-         <div>
-           <SelectSources test={this.returnSources}/>
-           </div>)
+                <div>
+                  <SelectSources test={this.returnSources}/>
+                </div>
+            )
+        }
+    }
+    renderDefaultHomePage(){
+        if (!this.props.auth){
+            console.log(this.props.auth + "checking for auth");
         }
     }
 
-    renderDefaultHomePage(){
-      if (!this.props.auth){
-        console.log(this.props.auth + "checking for auth");
-      }
-    }
     renderHomePage(){ 
-    
-      if (!this.state.sourcesData){
-      return <p className="message">No Sources Saved</p>;
-      }
-      else if (this.state.sourcesData){
+        if (!this.state.sourcesData){
+            return <p className="message">No Sources Saved</p>;
+        }
+        else if (this.state.sourcesData){
             console.log ("ready"); 
             console.log ("the data" + this.state.sourcesData)
             console.log (typeof this.state.sourcesData )
-          return this.state.sourcesData.map(source => {
-        return (
-          <div> 
-            
-            <div className="userHome_source"> Viewing New From {source.source_code}
-            <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
-           
-            </div>
-            <GetNews source={source.source_code} userID={this.props.userID } userName={this.props.userName}/>
-          </div>
-        );
-      });
+            return this.state.sourcesData.map(source => {
+                return (
+                    <div>
+                          <div className="userHome_source"> Viewing New From {source.source_code}
+                              <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
+                          </div>
+                          <GetNews source={source.source_code} userID={this.props.userID }/>
+                    </div>
+                );
+            });
+        }
     }
-
-}
-
-
-  render() {
-    return (
-      <div >
-            {this.renderHomePage()}
-      </div>
-    )
-  }
-
+    render() {
+        return (
+            <div >
+                {this.renderHomePage()}
+            </div>
+        )
+    }
 }
 
 

@@ -61,9 +61,6 @@ class SourceChoices extends Component {
           console.log(error);
         });
 		
-       
-           
- 
 
 	}
         render() {
