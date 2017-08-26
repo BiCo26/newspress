@@ -20,8 +20,7 @@ class DefaultHome extends Component {
           return this.state.defaultSources.map(source => {
         return (
           <div>  
-            <h1 className='defualtTag'>Viewing Default</h1>  
-            <h1 className='defualtTag'>Source: {source.source.code}</h1>
+            <h1 className='defaultTag'><span className = 'SOURCE'>SOURCE:</span> {source.source.code}</h1>
             <GetNews source={source.source.code}/>
           </div>
         );

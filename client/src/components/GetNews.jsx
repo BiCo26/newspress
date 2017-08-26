@@ -51,7 +51,7 @@ class GetNews extends Component {
               return (
               
                     
-              <SingleArticle key={article.title} articleData={article} userID={this.props.userID}/>
+              <SingleArticle key={article.title} articleData={article} userID={this.props.userID} userName={this.props.userName}/>
        
               ); });
         } else return <p>Loading...</p>

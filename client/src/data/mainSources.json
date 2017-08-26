@@ -28,7 +28,7 @@
     "source": {
       "name": "Associated Press", 
       "code":"associated-press",
-      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Associated_Press_logo.svg/2000px-Associated_Press_logo.svg.png"
+      "image":"http://wcluradio.com/wp-content/uploads/2016/10/Associated_Press_500x261.png"
     }
   },
   {
@@ -36,7 +36,7 @@
     "source": {
       "name": "BBC News", 
       "code":"bbc-news",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://static1.squarespace.com/static/52c94f4ce4b097374c3a763c/537a44bee4b0fc68f336b2a1/575d7a2645bf2196ee6d39a9/1476194052548/bbc-news.png?format=1000w"
     }
   },
   {
@@ -44,7 +44,7 @@
     "source": {
       "name": "BBC Sport", 
       "code":"bbc-sport",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2016/07/01/715b8dcc-c49a-4774-b52d-cc0d5d73b932/BBC-Sport.png"
     }
   },
   {
@@ -52,7 +52,7 @@
     "source": {
       "name": "Bild", 
       "code":"bild",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Logo_BILD.svg/567px-Logo_BILD.svg.png"
     }
   },
   {
@@ -60,35 +60,28 @@
     "source": {
       "name": "Bloomberg", 
       "code":"bloomberg",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/4/4d/Bloomberg_News_logo.png"
     }
   },
+
   {
-    "id": "9",
-    "source": {
-      "name": "Breitbart News", 
-      "code":"breitbart-news",
-      "img":"https://www.thewrap.com/wp-content/uploads/2016/11/Breitbart-logo.jpg"
-    }
-  },
-  {
-    "id":"10",
+    "id":"9",
     "source": {
       "name":"Business Insider", 
       "code":"business-insider",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"http://static2.businessinsider.com/image/544e9ea56bb3f7554c911e8d-800-440/bilogo-"
+    }
+  },
+  {
+    "id": "10",
+    "source": {
+      "name": "Business Insider (UK)", 
+      "code":"business-insider-uk",
+      "img":"https://www.mediagene.co.jp/wp-content/uploads/2016/09/BI-2-540x312.jpg"
     }
   },
   {
     "id": "11",
-    "source": {
-      "name": "Business Insider (UK)", 
-      "code":"business-insider-uk",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
-    }
-  },
-  {
-    "id": "12",
     "source": {
       "name": "Buzzfeed", 
       "code":"buzzfeed",
@@ -96,63 +89,63 @@
     }
   },
   {
-    "id": "13",
+    "id": "12",
     "source": {
       "name": "CNBC", 
       "code":"cbnc",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/2000px-CNBC_logo.svg.png"
+    }
+  },
+  {
+    "id": "13",
+    "source": {
+      "name": "CNN", 
+      "code":"cnn",
+      "img":"https://nppa.org/sites/default/files/CNN%20LOGO%20new.png"
     }
   },
   {
     "id": "14",
     "source": {
-      "name": "CNN", 
-      "code":"cnn",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "name": "Daily Mail", 
+      "code":"daily-mail",
+      "img":"http://shelliewallphotography.co.uk/wp-content/uploads/2015/11/daily_mail_main.png"
     }
   },
   {
     "id": "15",
     "source": {
-      "name": "Daily Mail", 
-      "code":"daily-mail",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "name": "Der Tagesspiegel", 
+      "code":"der-tagesspiegel",
+      "img":"http://www.somalische.com/wp-content/uploads/2016/06/tagesspiegel.png"
     }
   },
   {
     "id": "16",
     "source": {
-      "name": "Der Tagesspiegel", 
-      "code":"der-tagesspiegel",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "name": "Die Zeit", 
+      "code":"die-zeit",
+      "img":"https://initiative-chefsache.de/content/uploads/2017/05/Die-Zeit.png"
     }
   },
   {
     "id": "17",
     "source": {
-      "name": "Die Zeit", 
-      "code":"die-zeit",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "name": "Engadget", 
+      "code":"engadget",
+      "img":"http://logonoid.com/images/engadget-logo.png"
     }
   },
   {
     "id": "18",
     "source": {
-      "name": "Engadget", 
-      "code":"engadget",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
+      "name": "Entertainment Weekly", 
+      "code":"entertainment-weekly",
+      "img":"http://microsites.ew.com/microsite/media-kit/2017/images/ew%20large%20logo.png?crc=462297111"
     }
   },
   {
     "id": "19",
-    "source": {
-      "name": "Entertainment Weekly", 
-      "code":"entertainment-weekly",
-      "img":"https://rorytrotter.files.wordpress.com/2013/03/red-circle.jpg"
-    }
-  },
-  {
-    "id": "20",
     "source": {
       "name": "ESPN", 
       "code":"espn",
@@ -160,7 +153,7 @@
     }
   },
   {
-    "id": "21",
+    "id": "20",
     "source": {
       "name": "ESPN Cric Info", 
       "code":"espn-cric-info",
@@ -168,7 +161,7 @@
     }
   },
   {
-    "id": "22",
+    "id": "21",
     "source": {
       "name": "Financial Times", 
       "code":"financial-times",
@@ -176,7 +169,7 @@
     }
   },
   {
-    "id": "23",
+    "id": "22",
     "source": {
       "name": "Focus", 
       "code":"focus",
@@ -184,7 +177,7 @@
     }
   },
   {
-    "id": "24",
+    "id": "23",
     "source": {
       "name": "Football Italia", 
       "code":"football-italia",
@@ -192,7 +185,7 @@
     }
   },
   {
-    "id": "25",
+    "id": "24",
     "source": {
       "name": "Fortune", 
       "code":"fortune",
@@ -200,7 +193,7 @@
     }
   },
   {
-    "id": "26",
+    "id": "25",
     "source": {
       "name": "FourFourTwo", 
       "code":"four-four-two",
@@ -208,7 +201,7 @@
     }
   },
   {
-    "id": "27",
+    "id": "26",
     "source": {
       "name": "Fox Sports", 
       "code":"fox-sports",
@@ -216,7 +209,7 @@
     }
   },
   {
-    "id": "28",
+    "id": "27",
     "source": {
       "name": "Google News", 
       "code":"google-news",
@@ -224,7 +217,7 @@
     }
   },
   {
-    "id": "29",
+    "id": "28",
     "source": {
       "name": "Gruenderszene", 
       "code":"gruenderszene",
@@ -232,7 +225,7 @@
     }
   },
   {
-    "id": "30",
+    "id": "29",
     "source": {
       "name": "Hacker News", 
       "code":"hacker-news",
@@ -240,7 +233,7 @@
     }
   },
   {
-    "id": "31",
+    "id": "30",
     "source": {
       "name": "Handelsblatt", 
       "code":"Handelsblatt",
@@ -248,7 +241,7 @@
     }
   },
   {
-    "id": "32",
+    "id": "31",
     "source": {
       "name": "IGN", 
       "code":"ign",
@@ -256,7 +249,7 @@
     }
   },
   {
-    "id": "33",
+    "id": "32",
     "source": {
       "name": "Independent", 
       "code":"independent",
@@ -264,7 +257,7 @@
     }
   },
   {
-    "id": "34",
+    "id": "33",
     "source": {
       "name": "Mashable", 
       "code":"mashable",
@@ -272,7 +265,7 @@
     }
   },
   {
-    "id": "35",
+    "id": "34",
     "source": {
       "name": "Metro", 
       "code":"Metro",
@@ -280,7 +273,7 @@
     }
   },
   {
-    "id": "36",
+    "id": "35",
     "source": {
       "name": "Mirror", 
       "code":"Mirror",
@@ -288,7 +281,7 @@
     }
   },
   {
-    "id": "37",
+    "id": "36",
     "source": {
       "name": "MTV News", 
       "code":"mtv-news",
@@ -296,7 +289,7 @@
     }
   },
   {
-    "id": "38",
+    "id": "37",
     "source": {
       "name": "MTV News (UK)", 
       "code":"mtv-news-uk",
@@ -304,7 +297,7 @@
     }
   },
   {
-    "id": "39",
+    "id": "38",
     "source": {
       "name": "National Geographic", 
       "code":"national-geographic",
@@ -312,7 +305,7 @@
     }
   },
   {
-    "id": "40",
+    "id": "39",
     "source": {
       "name": "New Scientist", 
       "code":"new-scientist",
@@ -320,19 +313,165 @@
     }
   },
   {
-    "id": "41",
+    "id": "40",
     "source": {
       "name": "Newsweek", 
       "code":"newsweek",
-      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+      "img":"https://fiu-assets-2-syitaetz61hl2sa.stackpathdns.com/static/use-media-items/22/21501/full-562x156/567036c5/Newsweek-logo-1986.png?resolution=0"
+    }
+  },
+  {
+    "id": "41",
+    "source": {
+      "name": "New York Magazine", 
+      "code":"new-york-magazine",
+      "img":"http://68.media.tumblr.com/c5e02ad43b648a43505766766fae3852/tumblr_nu3sldWmD61s07vpzo1_1280.jpg"
     }
   },
   {
     "id": "42",
     "source": {
-      "name": "Newsweek", 
-      "code":"newsweek",
-      "img":"http://tribunecontentagency.com/wp-content/uploads/2015/03/logo-new_scientist-667x193.png"
+      "name": "NFL News", 
+      "code":"nfl-news",
+      "img":"http://www.mercadofichas.com/media/teams/thumbnails/NFL-logo.png"
+      
+    }
+  },
+  {
+    "id": "43",
+    "source": {
+      "name": "Polygon", 
+      "code":"polygon",
+      "img":"http://www.indiecade.com/images/news_articles/polygon-logo.png"
+    }
+  },
+  {
+    "id": "44",
+    "source": {
+      "name": "Recode", 
+      "code":"recode",
+      "img":"http://1xdh0c2vx1s41ew8c51fqixz.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/Logo-Variations_re-code-copy.png"
+    }
+  },
+  {
+    "id": "45",
+    "source": {
+      "name": "Reddit/r/all", 
+      "code":"reddit-r-all",
+      "img":"https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Reddit_logo_and_wordmark.svg/1280px-Reddit_logo_and_wordmark.svg.png"
+    }
+  },
+  {
+    "id": "46",
+    "source": {
+      "name": "Reuters", 
+      "code":"reuters",
+      "img":"https://agency.reuters.com/content/dam/openweb/images/brand-assets/reuters-logos/rtr_ahz_rgb_pos1.png/_jcr_content/renditions/original"
+    }
+  },
+  {
+    "id": "47",
+    "source": {
+      "name": "Spiegel Online", 
+      "code":"spiegel-online",
+      "img":"http://cdn.embed.ly/providers/logos/spiegel.png"
+    }
+  },
+  {
+    "id": "48",
+    "source": {
+      "name": "T3n", 
+      "code":"t3n",
+      "img":"https://parkpocket.com/_common/img/logos/t3n.png"
+    }
+  },
+  
+  {
+    "id": "49",
+    "source": {
+      "name": "TalkSport", 
+      "code":"talksport",
+      "img":"http://www.corporateguidelines.com/talksport/images/talkSPORT_football_NoFreq_STK_RGB.png"
+    }
+  },
+  {
+    "id": "50",
+    "source": {
+      "name": "TechCrunch", 
+      "code":"techCrunch",
+      "img":"https://arpr.com/app/uploads/2016/10/techcrunch-logo.png"
+    }
+  },
+  {
+    "id": "51",
+    "source": {
+      "name": "TechRadar", 
+      "code":"techradar",
+      "img":"https://www.lulzbot.com/sites/default/files/TechRadar_logo_edited.png"
+    }
+  },
+  {
+    "id": "52",
+    "source": {
+      "name": "The Economist", 
+      "code":"the-economist",
+      "img":"http://logos-download.com/wp-content/uploads/2016/05/The_Economist_logo.png"
+    }
+  },
+  {
+    "id": "53",
+    "source": {
+      "name": "The Guardian (AU)", 
+      "code":"the-guardian-au",
+      "img":"https://thegoodbeerco.com.au/wp-content/uploads/2015/12/Untitled-design-20.jpg"
+    }
+  },
+  {
+    "id": "54",
+    "source": {
+      "name": "The Guardian (UK)", 
+      "code":"the-guardian-uk",
+      "img":"http://www.userlogos.org/files/logos/sogol%20resu/guardian.co.uk.png"
+    }
+  },
+  {
+    "id": "55",
+    "source": {
+      "name": "The Hindu", 
+      "code":"the-hindu",
+      "img":"http://www.ftcash.com/assets/img/press/thehindu.png"
+    }
+  },
+  {
+    "id": "56",
+    "source": {
+      "name": "The Huffington Post", 
+      "code":"the-huffington-post",
+      "img":"http://mutualrescue.org/wp-content/uploads/2016/12/press-logo-huffington-post.png"
+    }
+  },
+  {
+    "id": "57",
+    "source": {
+      "name": "The Lad Bible", 
+      "code":"the-lad-bible",
+      "img":"http://spiceukonline.com/wp-content/uploads/2015/12/The-LAD-Bible-Logo-EPS-vector-image.png"
+    }
+  },
+  {
+    "id": "58",
+    "source": {
+      "name": "The Lad Bible", 
+      "code":"the-lad-bible",
+      "img":"http://spiceukonline.com/wp-content/uploads/2015/12/The-LAD-Bible-Logo-EPS-vector-image.png"
+    }
+  },
+  {
+    "id": "59",
+    "source": {
+      "name": "The New York Times", 
+      "code":"the-new-york-times",
+      "img":"https://www.retireat21.com/wp-content/uploads/2014/11/New-York-Times-logo.png"
     }
   }
   
