@@ -30,19 +30,47 @@ class Home extends Component {
         console.log ("test props "+ this.props.userSources);
     }
     //deleting source V
-    deleteSavedSource(source_id){
-        console.log(source_id)
-        axios.post(`/news/deleteSource`,{
-            source_id:source_id
-        }) 
-        .then(res =>{
-            console.log(res);
-            this.setState({
-            fireRedirect: true,
-            });
-        }).catch(err => {
-            console.log(err);
+
+    deleteSavedSource(source_id) {
+      
+      console.log(source_id)
+    axios.post(`/news/deleteSource`,{
+      source_id:source_id
+    }) 
+      .then(res => {
+        console.log(res);
+        this.setState({
+          fireRedirect: true,
         });
+      }).catch(err => {
+        console.log(err);
+      });
+
+
+    //deleting the article locally using a filter-opptimistic approach
+    let upadatedSourcesData = [];
+    this.state.sourcesData.forEach(function(source){
+        if (source.id!== source_id){
+            upadatedSourcesData.push(source);
+        }
+    });
+    //setting the filtered array to state
+    this.setState({
+            sourcesData: upadatedSourcesData
+    });
+  }
+  //deleting source ^
+
+    returnSources(sources_input){
+        console.log("bleh")
+        console.log(sources_input);
+        
+         this.setState({
+           sourceData:sources_input,
+           dataLoaded:true, 
+        })
+
+        console.log (this.state.sourceData + "yellow");
     }
 
     //deleting source ^
