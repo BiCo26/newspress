@@ -41,6 +41,7 @@ class Home extends Component {
     }
 
     //deleting source V
+
     deleteSavedSource(source_id) {
       
       console.log(source_id)
@@ -55,6 +56,19 @@ class Home extends Component {
       }).catch(err => {
         console.log(err);
       });
+
+
+    //deleting the article locally using a filter-opptimistic approach
+    let upadatedSourcesData = [];
+    this.state.sourcesData.forEach(function(source){
+        if (source.id!== source_id){
+            upadatedSourcesData.push(source);
+        }
+    });
+    //setting the filtered array to state
+    this.setState({
+            sourcesData: upadatedSourcesData
+    });
   }
   //deleting source ^
 
