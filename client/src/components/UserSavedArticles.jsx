@@ -35,11 +35,12 @@ componentWillMount(){
 }
 
 deleteSavedArticle(articleID) {
+
       console.log("the articke ID is========= " +articleID);
     axios.post(`/news/deleteArticle`,{
       article_id:articleID
     }) 
-      .then(res => {
+.then(res => {
         console.log(res);
         this.setState({
           fireRedirect: true,
@@ -87,9 +88,13 @@ renderSavedArticles(){
         return (
          <div>   
             <div className="userArticle">Viewing User Saved Article
+<<<<<<< HEAD
 
                  <button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>
 
+=======
+                 {/*<button className="delete" type="button" onClick={()=>{this.deleteSavedArticle(article.id)}}>Delete Source</button>*/}
+>>>>>>> update
                  <button className="singleView" type="button" onClick={()=>{this.renderSingleArticle(article)}}>View More</button>
 
             </div>   
