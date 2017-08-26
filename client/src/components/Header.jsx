@@ -6,10 +6,10 @@ const Header = (props) => {
       <div className="logo">NewsPress</div>
       <nav>
         <ul>
-          <li onClick={() => props.setPage('home')}>Home</li>
+          <li className='dropBtwn' onClick={() => props.setPage('home')}>Home</li>
           <li onClick={() => props.setPage('user')}>My News</li>
           <li onClick={() => props.setPage('login')}>Log In</li>
-            <ul className = 'submenu'>
+            <ul className = 'dropContent'>
               <li onClick={() => props.setPage('register')}>Register</li>
               <li onClick={props.logOut}>Log Out</li>
             </ul>
