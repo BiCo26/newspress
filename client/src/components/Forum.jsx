@@ -11,6 +11,7 @@ class Forum extends Component{
         }
      this.contentUpdate = this.contentUpdate.bind(this);  
      this.handleTopicSubmit = this.handleTopicSubmit.bind(this); 
+     this.userNameCheck = this.userNameCheck.bind(this);
     }
 // call the api to get all topics in the database
     componentDidMount(){
@@ -26,12 +27,19 @@ class Forum extends Component{
        })
      }).catch(err => console.log(err));
     }
+   
+    userNameCheck(username) {
+      if (username) {
+          this.handleTopicSubmit(this.props.username, this.props.article_title)
+      } else {
+          this.handleTopicSubmit('Guest' , this.props.article_title)
+      }
+    }
 
 // when a new topic is posting, link to backend to add data in posts table
     handleTopicSubmit(username,article_title) {
-      console.log(this.props.username)  
       axios.post('/news/topic', {
-      username: this.props.username,
+      username: username,
       topic: this.state.topic,
       article_title: this.props.article_title
     }).then(res => {
@@ -56,14 +64,16 @@ class Forum extends Component{
     }
 
     render(){
-    return( <div classNmae='forum'> 
+    return( <div classNmae='forumall'> 
              <div classNmae='postnewtopic'>
-            <form onSubmit={(e) => this.handleTopicSubmit(this.props.username, this.props.article_title)}>
-                <textarea value={this.state.topic} onChange={this.contentUpdate}/>
+            <form onSubmit={(e) => this.userNameCheck(this.props.username, this.props.article_title)}>
+                <textarea value={this.state.topic} onChange={this.contentUpdate} placeholder='Leave comment here!'/>
                 <input type='submit' value='Post'/>
             </form>
             </div>
+            <div className='currenttopics'>
             {this.renderCurrentTopics()}
+            </div>
           </div>
         )
     }

@@ -3,10 +3,10 @@ import React, {
 } from 'react';
 
 import axios from 'axios';
+import Forum from './Forum';
 
 
-
-class Article extends Component {
+class SingleArticle extends Component {
 constructor(props){
 		super(props);
 		this.state = {
@@ -48,4 +48,4 @@ constructor(props){
         )
       }
 }
-export default Article;
+export default SingleArticle;

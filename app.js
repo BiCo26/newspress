@@ -33,12 +33,9 @@ app.use(express.static('public'));
 
 // views
 
-/*
 app.get('/', (req, res) => {
-  res.render('index', {
-    message: "We are live!"
-  });
-});*/
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 
 /* setting up port & listen */

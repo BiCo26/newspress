@@ -1,6 +1,9 @@
 {
   "name": "bitfit",
   "version": "1.0.0",
+   "engines": {
+    "node": "8.1.2"
+  },
   "main": "index.js",
   "repository": "https://github.com/gumosun/bitfit.git",
   "author": "Hao Sun <hao.sun@nyu.edu>",
@@ -22,6 +25,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "debugger": "DEBUG=*:* npm run dev"
+    "debugger": "DEBUG=*:* npm run dev",
+    "deploy": "cd client && yarn build && cp -a ./build/ ../public/"
   }
 }

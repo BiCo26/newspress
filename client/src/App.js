@@ -54,7 +54,7 @@ class App extends Component {
           
           //return <p className="defualtTag">you are logged in</p>
           return <Home auth={this.state.auth} userSources={this.state.userSourcesApp}
-          userID={this.state.user} />;
+          userID={this.state.user} userName={this.state.userName}/>;
       }
       else return <DefaultHome/>
         break;

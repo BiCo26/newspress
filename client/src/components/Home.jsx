@@ -101,7 +101,7 @@ class Home extends Component {
             <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
            
             </div>
-            <GetNews source={source.source_code} userID={this.props.userID }/>
+            <GetNews source={source.source_code} userID={this.props.userID } userName={this.props.userName}/>
           </div>
         );
       });
