@@ -65,9 +65,10 @@ class SourceChoices extends Component {
 	}
         render() {
                     return <div className="source_choices">
+                        
                         <form name="sources-form" onSubmit={this.handleSubmit}>
                             <input  className="search" type="text"  name="sourceVal" placeholder='Enter a source here' onChange={this.handleChange}/>
-                            <input className=" addSource" type="submit"  value="add" />
+                            <input className="addSource button" type="submit"  value="add" />
                         </form>
 
 
@@ -76,6 +77,7 @@ class SourceChoices extends Component {
                         <p>{this.props.test}</p>
                         {sources.map(source=>{
                         return (
+            
                         <li className = 'register_image_li'>
                             <div className="source_icon_container">
                                 <div onClick= {()=>this.handleClick(source)}>

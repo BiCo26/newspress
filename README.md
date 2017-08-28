@@ -1,7 +1,7 @@
 # News Press
-Is a news feed app.  On the landing page the user can choose from top trending news videos and upon account registration can save their videos to their user profile.
+`Is a news feed application.  On the landing page the user can choose from top trending news videos and upon account registration can save their videos to their user profile.`
 
-###Technology Used
+##Technology Used
 * Express framework for backend.
 * ReactJS for front-end.
 * PSQL to hold data from our own, 
@@ -9,36 +9,27 @@ Is a news feed app.  On the landing page the user can choose from top trending n
 * Third party API to render the news
 * Firebase is used for the Facebook token login
 
+`The News Team took an open discussion approach to this project.  Any idea anyone had was encouraged to be shared in the group.  We brain stormed for apps that we would all enjoy making.  The group as a whole was very flexible and quick to adapt to changes.`
 
 #Wireframe
 
-##Landing Page / Login
+##Home Page
+![Home Page](./newspress/client/public/sources)
+
+##Login
+![Login Page](./newspress/client/public/login) 
+
+##User Page
+![User Page](./newspress/client/public/userPage) 
 
 
+###Installation instructions for any dependencies
 
+###Link to your ERDs - Diagrams of your models and their relationships
 
-<!-- # Phase 0: Environment
+###User stories – who are your users, what do they want, and why?
+`Our users are adults approximately 18 years and older.  Interested in staying up to date with the news, from different news sources.  Our users want to be privvy to different perspectives on the same events.  News Press allows for users to have a news hub and to customize the news sources and or articles in their user profile. `
 
-
-- Create a database `bit**fit_dev` in psql
-- Create and initialize the migration and the seed file 
-- Create app.js 
-
-# Phase 0.5: React Set Up
-
-- Create /client. 
-- Install dependencies 
--  `"proxy": "https://localhost:3001"`
-
-# Phase 1: Components
-
-- Within the React app, create a `src/components` folder. Then, create the following components (right now, we're just going to work on `Header` and `Footer`:
-    - Header
-    - Footer
-    - IceCreamList
-    - IceCream
-    - IceCreamSingle
-    - IceCreamAddForm
-    - IceCreamEditForm
-    - Home
- -->
+###issues
+* Github issues slowed us down - until we came up with a protocol on pushing     and pulling.
+* Came across issues with the drop down menu.

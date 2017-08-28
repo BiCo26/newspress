@@ -79,11 +79,31 @@ nav li {
   font-size:2vw;
 }
 
+ul {	
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .li a{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 10px 16px;
+
+  }
+
+  .li:hover, .dropDwn:hover {
+    color: black;
+    cursor: pointer;
+    transition: .5s;
+  }
+
 
 header {
-  height: 24vh;
+  height: 14vh;
   width: 100vw;
-  padding: 1%;
+  padding: 2%;
   background-color: #B60505;
   color: white;
   font-family: 'Limelight', helvetica; 
@@ -104,23 +124,24 @@ body {
   line-height: 0.85;
 }
 
-button {
+button, .button {
   background-color: #B60505;
   margin: 3px;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   color: black;
   border-radius: 120px;
   border: solid black 3px;
   box-shadow: black 2px 2px;
   font-family: 'Nova Slim', helvetica;
+  cursor: pointer;
 }
 .SOURCE{
   color: white;
   text-shadow: #B60505 2px 2px;
 }
-button:hover{
-  font-size: 16px;
+button:hover, .button:hover{
+  font-size: 18px;
   color: white;
   border-radius: 120px;
   border: solid black 3px;
@@ -131,28 +152,32 @@ button:hover{
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   margin: 10px;
+  /* height: 465px; */
+  /* width: 200%; */
   
 }
 .article {
   align-content: center;
-  height: 460px;
+  height: 440px;
   width: 19.5%;
   border: solid black;
   overflow: scroll;
 }
 .articleImg {
-  height: 50%;
+  height: 45%;
   width: 95%;
 }
 
 .singleArticle_title {
   text-decoration: underline;
   position: relative;
+  font-family: 'Nova Slim', bold, helvetica;
+  font-weight: 900 ;
 }
 p {
-  font-weight: 0px;
+  
   font-family: 'Nova Slim', helvetica;
   text-align: center;
   position: relative;
@@ -171,24 +196,29 @@ p {
   width: 29%;
   list-style: none;
   padding: 2%;
+  border-style: solid ;
   
 }
 
 .source_icon{
-  height: 80px;
+  height: 145px;
+  border-style: solid ;
+}
+.source_icon:hover{
+  height:160px;
+  cursor: pointer;
+  background-color: rgba(85, 1, 1, .5);
+  transition: .5s;
 }
 
 .source_icon_container{
-  border-style: dotted dashed solid double;
+  border-style: solid ;
 }
 .defaultTag{
   font-size: 40px;
   background-color: black; 
   color: #B60505;
   margin: 3px;
-
-}
-.submenu {
 
 }
 
@@ -231,4 +261,14 @@ textarea {
 .topic {
   color: blue;
   margin: 5px;
+}
+
+
+input {
+  background-color: whitesmoke;
+  margin-top: 10px;
+}
+.formTitle {
+  font-size: 50px;
+  font-family: 'Limelight', helvetica; 
 }
