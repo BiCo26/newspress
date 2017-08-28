@@ -115,7 +115,7 @@ class Home extends Component {
             return this.state.sourcesData.map(source => {
                 return (
                     <div>
-                          <div className="userHome_source"> Viewing New From {source.source_code}
+                          <div className="userHome_source"> SOURCE: {source.source_code}
                               <button className="delete" type="button" onClick={()=>{this.deleteSavedSource(source.id)}}>Delete Source</button>
                           </div>
                           <GetNews source={source.source_code} userID={this.props.userID }/>
