@@ -67,7 +67,7 @@ class SourceChoices extends Component {
                     return <div className="source_choices">
                         
                         <form name="sources-form" onSubmit={this.handleSubmit}>
-                            <input  className="search" type="text"  name="sourceVal" placeholder='Enter a source here' onChange={this.handleChange}/>
+                            {/* <input  className="search" type="text"  name="sourceVal" placeholder='Enter a source here' onChange={this.handleChange}/> */}
                             <input className="addSource button" type="submit"  value="add" />
                         </form>
 

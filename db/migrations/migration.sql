@@ -1,6 +1,6 @@
--- DROP DATABASE IF EXISTS newspress_dev;
--- CREATE DATABASE newspress_dev;
--- \c newspress_dev
+DROP DATABASE IF EXISTS newspress_dev;
+CREATE DATABASE newspress_dev;
+\c newspress_dev
 
 
 CREATE TABLE IF NOT EXISTS users (
@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS sources (
   id SERIAL PRIMARY KEY,
-  image_url VARCHAR(255) NOT NULL,
-  source_name VARCHAR(255) NOT NULL,
-  source_code VARCHAR(255) NOT NULL,
+  image_url VARCHAR(255) ,
+  source_name VARCHAR(255) ,
+  source_code VARCHAR(255) ,
   user_id INT REFERENCES users(id) NOT NULL 
 );
 
