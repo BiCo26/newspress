@@ -30,10 +30,11 @@ class Register extends Component {
   render() {
     return (
       <div>
+        <h1 className='formTitle'> Register to save your sources and articles!</h1>
         <form onSubmit={(e) => this.props.handleRegisterSubmit(e, this.state.username, this.state.password)}>
           <input type="text" name="username" value={this.state.username} placeholder="Username" onChange={this.handleUserChange}  /> 
           <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.handlePasswordChange}  />
-          <input type="submit" value='Register!'/>
+          <input className='button' type="submit" value='Register!'/>
         </form>
       </div>
     )
