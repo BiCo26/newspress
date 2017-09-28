@@ -30,7 +30,7 @@
 ![Entity Relationship Diagram](./newspress/client/public/ERD.jpg)
 
 ### User stories – who are your users, what do they want, and why?
-`Our users are adults approximately 18 years and older.  Interested in staying up to date with the news, from different news sources.  Our users want to be privvy to different perspectives on the same events.  News Press allows for users to have a news hub and to customize the news sources and or articles in their user profile. `
+`Our end users are adults approximately 18 years and older.  Interested in staying up to date with the news, from different news sources.  Our users want to be privvy to different perspectives on the same events.  News Press allows for users to have a news hub and to for quick access and source and article customization within their user profile. `
 
 #### Issues
 * Github issues slowed us down - until we came up with a protocol on pushing     and pulling.
